@@ -1,34 +1,33 @@
 # 対話型生成AIによるコード依存関係分析ツール
 
-C++ / Java / C# コードベースの依存関係を、対話型 AI（UI のみ）＋ VS Code ローカルプレビューで可視化するツール。API キー・GitHub・外部アカウント不要。
+コードベースの依存関係を、AI との会話だけでクラス図・コールグラフとして可視化・維持管理するツール。
+成果物は Mermaid 形式の `.md` ファイルとしてリポジトリに保存される。API キー・外部サービス不要。
+
+## 2 つの使い方
+
+**利用者**（図を読む・活用する）  
+既存のクラス図・コールグラフを VS Code でプレビューし、任意のシナリオに対応するシーケンス図をオンデマンドで生成する。`bundle.py` もプロンプト操作も不要。
+
+**管理者**（図を作る・維持する）  
+コード変更のたびに `bundle.py` でソースをバンドルし、AI に貼り付けてマスタ図を更新する。9 言語対応（C/C++・Java・C#・Python・TypeScript・JavaScript・PHP・Rust・Visual Basic）。
 
 ## 前提環境
 
-- Python 3.8 以上（標準ライブラリのみ）
-- VS Code + [Mermaid Chart 拡張](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart)（アカウント登録不要）
+**利用者**
+- VS Code + [Mermaid Chart 拡張](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart)
 - 対話型 AI（Claude.ai / ChatGPT 等の UI）
 
-## クイックスタート
-
-```bash
-# 1. ソースをバンドル
-python bundle.py --root /path/to/src
-
-# 2. AI に貼り付け（diagrams-upsert.md の全文 + bundle.txt の内容）
-
-# 3. 応答の class-diagram.md と call-graph.md を diagrams/ に保存
-```
-
-初回の詳細手順は [チュートリアル](docs/tutorials/first-diagram.md) を参照。
+**管理者**（上記に加えて）
+- Python 3.8 以上（標準ライブラリのみ）
 
 ## ドキュメント
 
-| カテゴリ | ドキュメント |
-|---------|------------|
-| チュートリアル | [はじめての依存関係図](docs/tutorials/first-diagram.md) |
-| ハウツー | [図を更新する](docs/how-to/update-diagrams.md) / [エントリを削除する](docs/how-to/delete-entries.md) / [シーケンス図を派生する](docs/how-to/derive-sequence.md) |
-| リファレンス | [bundle.py CLI](docs/reference/bundle-py.md) / [プロンプトファイル仕様](docs/reference/prompts.md) |
-| 解説 | [設計の判断](docs/explanation/design-decisions.md) |
+| カテゴリ | 内容 |
+|---------|------|
+| [チュートリアル](docs/tutorials/README.md) | 図を読む（利用者向け）・図を作る（管理者向け） |
+| [ハウツー](docs/how-to/README.md) | 図の更新・削除・シーケンス派生 |
+| [リファレンス](docs/reference/README.md) | bundle.py CLI・プロンプトファイル仕様 |
+| [解説](docs/explanation/design-decisions.md) | 設計の判断根拠 |
 
 ## ファイル構成
 
@@ -39,4 +38,4 @@ python bundle.py --root /path/to/src
 | `diagrams-upsert.md` | マスタ 2 枚の Upsert（Create + Update） |
 | `diagrams-delete.md` | マスタ 2 枚の Delete |
 | `diagrams-convert-to-sequence.md` | マスタ 2 枚からシーケンス図を派生 |
-| `docs/` | Diataxis 形式の利用者向けドキュメント |
+| `docs/` | Diataxis 形式のドキュメント |
