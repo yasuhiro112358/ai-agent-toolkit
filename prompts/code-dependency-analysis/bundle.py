@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """
-bundle.py — Bundle C++/Java/C# source files into the MANIFEST format
-            defined in requirements.md §4.3.
+bundle.py — Bundle source files into the MANIFEST format defined in requirements.md §4.3.
+
+Supported languages (default): C/C++, Java, C#, Visual Basic, Python,
+                                TypeScript, JavaScript, PHP, Rust
 
 Usage:
     python bundle.py --root <src_dir> [--out bundle.txt]
@@ -33,19 +35,33 @@ from pathlib import Path
 from typing import Iterable
 
 DEFAULT_EXTENSIONS = {
-    ".cpp", ".cxx", ".cc", ".c++",
-    ".hpp", ".hxx", ".hh", ".h",
+    # C / C++
+    ".c", ".cpp", ".cxx", ".cc", ".c++",
+    ".h", ".hpp", ".hxx", ".hh",
+    # Java
     ".java",
+    # C#
     ".cs",
+    # Visual Basic
+    ".vb",
+    # Python
+    ".py",
+    # TypeScript / JavaScript
+    ".ts", ".tsx", ".js", ".jsx",
+    # PHP
+    ".php",
+    # Rust
+    ".rs",
 }
 
 # Loose regex — MANIFEST is a hint for the AI, not ground truth.
-# Matches `class Name`, `interface Name`, `struct Name` at any indent,
-# skipping `class;` forward-declarations (handled by requiring a body or base).
+# Matches class-like declarations across supported languages at any indent.
+# Case-insensitive to handle VB (Public Class), PHP (abstract class), etc.
 CLASS_PATTERN = re.compile(
-    r"^\s*(?:public|internal|private|protected|static|sealed|abstract|final|partial|\s)*"
-    r"\b(?:class|interface|struct)\s+([A-Za-z_][A-Za-z0-9_]*)",
-    re.MULTILINE,
+    r"^\s*(?:pub|public|internal|private|protected|static|sealed|abstract|final|partial|"
+    r"friend|mustinherit|notinheritable|export|default|readonly|\s)*"
+    r"\b(?:class|interface|struct|module|structure|trait|enum)\s+([A-Za-z_][A-Za-z0-9_]*)",
+    re.MULTILINE | re.IGNORECASE,
 )
 
 
