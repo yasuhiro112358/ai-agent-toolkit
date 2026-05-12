@@ -15,21 +15,27 @@
 ```mermaid
 sequenceDiagram
     actor 管理者
+    actor 開発者
     participant Script as bundle.py
     participant AI as 生成 AI
     participant Repo as diagrams/
 
-    管理者->>Script: python bundle.py --root ./src
-    Script-->>管理者: bundle.txt（MANIFEST形式）
-    管理者->>AI: diagrams-upsert.md + 既存マスタ + bundle.txt
-    AI-->>管理者: class-diagram.md + call-graph.md
-    管理者->>Repo: 保存（Git管理）
+    rect rgb(235, 245, 255)
+        Note over 管理者,Repo: 管理者フロー — マスタ図の更新
+        管理者->>Script: python bundle.py --root ./src
+        Script-->>管理者: bundle.txt（MANIFEST形式）
+        管理者->>AI: diagrams-upsert.md + 既存マスタ + bundle.txt
+        AI-->>管理者: class-diagram.md + call-graph.md
+        管理者->>Repo: 保存（Git管理）
+    end
 
-    actor 開発者
-    開発者->>Repo: マスタ2枚を読み込み
-    Repo-->>開発者: class-diagram.md + call-graph.md
-    開発者->>AI: diagrams-convert-to-sequence.md + マスタ2枚 + シナリオ指示
-    AI-->>開発者: sequenceDiagram ブロック
+    rect rgb(235, 255, 235)
+        Note over 開発者,Repo: 開発者フロー — シーケンス図の派生
+        開発者->>Repo: マスタ2枚を読み込み
+        Repo-->>開発者: class-diagram.md + call-graph.md
+        開発者->>AI: diagrams-convert-to-sequence.md + マスタ2枚 + シナリオ指示
+        AI-->>開発者: sequenceDiagram ブロック
+    end
 ```
 
 2 つのロール:
