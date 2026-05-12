@@ -35,7 +35,7 @@
 | パス | 役割 |
 | --- | --- |
 | `scripts/pack.py` | ソースファイルを1つのテキストにまとめる |
-| `pack.cfg` | pack.py のプロジェクト別設定 |
+| `scripts/pack.cfg` | pack.py のプロジェクト別設定 |
 | `prompts/diagrams-upsert.md` | マスタ2枚の Upsert（Create + Update） |
 | `prompts/diagrams-delete.md` | マスタ2枚の Delete |
 | `prompts/diagrams-convert-to-sequence.md` | マスタ2枚からシーケンス図を派生 |

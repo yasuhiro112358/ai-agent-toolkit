@@ -35,7 +35,7 @@ Bundle source code with `pack.py` and paste it along with a prompt into a chat A
 | Path | Role |
 | --- | --- |
 | `scripts/pack.py` | Bundle source files into a single text |
-| `pack.cfg` | Project-specific settings for pack.py |
+| `scripts/pack.cfg` | Project-specific settings for pack.py |
 | `prompts/diagrams-upsert.md` | Upsert master diagrams (Create + Update) |
 | `prompts/diagrams-delete.md` | Delete entries from master diagrams |
 | `prompts/diagrams-convert-to-sequence.md` | Derive sequence diagrams from master diagrams |
