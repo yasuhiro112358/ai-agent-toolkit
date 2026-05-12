@@ -10,7 +10,7 @@
 
 | ファイル | 操作 | 入力 | 出力 |
 | --- | --- | --- | --- |
-| `prompts/diagrams-upsert.md` | Create + Update | 既存マスタ2枚（任意）+ MANIFEST 形式コード | 更新された `class-diagram.md` + `call-graph.md` |
+| `prompts/diagrams-upsert.md` | Create + Update | 既存マスタ2枚（任意）+ pack.py の出力 | 更新された `class-diagram.md` + `call-graph.md` |
 | `prompts/diagrams-delete.md` | Delete | 既存マスタ2枚 + 削除指示（自然言語） | 削除後の `class-diagram.md` + `call-graph.md` |
 | `prompts/diagrams-convert-to-sequence.md` | Read / 派生 | マスタ2枚 + シナリオ指示（自然言語） | `sequenceDiagram` を含む `.md` |
 

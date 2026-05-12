@@ -9,11 +9,11 @@ Works with any chat AI (Claude.ai, ChatGPT, etc.) — no API key or external ser
 
 ### User (read and use diagrams)
 
-Preview existing class diagrams and call graphs in VS Code, and derive sequence diagrams for any scenario on demand. No `bundle.py` needed.
+Preview existing class diagrams and call graphs in VS Code, and derive sequence diagrams for any scenario on demand. No `pack.py` needed.
 
 ### Admin (create and maintain diagrams)
 
-Bundle source code with `bundle.py` and paste it along with a prompt into a chat AI to update the master diagrams. Supports 9 languages: C/C++, Java, C#, Python, TypeScript, JavaScript, PHP, Rust, Visual Basic.
+Bundle source code with `pack.py` and paste it along with a prompt into a chat AI to update the master diagrams. Supports 9 languages: C/C++, Java, C#, Python, TypeScript, JavaScript, PHP, Rust, Visual Basic.
 
 ## Requirements
 
@@ -34,7 +34,8 @@ Bundle source code with `bundle.py` and paste it along with a prompt into a chat
 
 | Path | Role |
 | --- | --- |
-| `scripts/bundle.py` | Convert source tree to MANIFEST format |
+| `scripts/pack.py` | Bundle source files into a single text |
+| `pack.cfg` | Project-specific settings for pack.py |
 | `prompts/diagrams-upsert.md` | Upsert master diagrams (Create + Update) |
 | `prompts/diagrams-delete.md` | Delete entries from master diagrams |
 | `prompts/diagrams-convert-to-sequence.md` | Derive sequence diagrams from master diagrams |

@@ -25,7 +25,7 @@ AI に以下を **1 メッセージで** 貼り付けて送信する。
 
 1. `prompts/diagrams-upsert.md` の全文
 2. 既存マスタ2枚の全文
-3. `bundle.txt` の内容
+3. `pack.txt` の内容
 4. 分割指示（例: 「パッケージ単位に分割して `class-<packageName>.md` と `call-graph-<packageName>.md` で返して。あわせてパッケージ間の依存を示す `package-diagram.md` も作って」）
 
 応答から各ファイルを取り出して保存し、VS Code でプレビュー確認 → Git コミット。

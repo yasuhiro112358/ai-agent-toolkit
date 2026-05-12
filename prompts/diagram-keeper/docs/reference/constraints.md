@@ -21,7 +21,7 @@
 
 ## 対応言語
 
-対応言語の一覧は [reference/bundle-py.md](bundle-py.md) 参照。
+対応言語の一覧は [reference/pack.md](pack.md) 参照。
 
 ---
 
@@ -66,4 +66,4 @@
 ← [diagram-keeper/ に戻る](../index.md)
 
 - なぜこれらの制約のもとでこの設計になったか → [../explanation/architecture-overview.md](../explanation/architecture-overview.md)
-- bundle.py の対象拡張子オプション → [bundle-py.md](bundle-py.md)
+- pack.py の対象拡張子オプション → [pack.md](pack.md)

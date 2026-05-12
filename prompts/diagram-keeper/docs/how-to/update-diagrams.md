@@ -14,8 +14,8 @@ sequenceDiagram
     participant AI as 生成 AI
     participant Repo as diagrams/
 
-    管理者->>管理者: bundle.py でバンドルを生成
-    管理者->>AI: diagrams-upsert.md + マスタ2枚 + bundle.txt を貼り付け
+    管理者->>管理者: pack.py でパックを生成
+    管理者->>AI: diagrams-upsert.md + マスタ2枚 + pack.txt を貼り付け
     AI-->>管理者: class-diagram.md + call-graph.md を返す
     管理者->>Repo: 上書き保存
     管理者->>管理者: VS Code でプレビュー確認・Git コミット
@@ -25,9 +25,11 @@ sequenceDiagram
 
 ## 手順
 
+`pack.cfg` を確認して実行する。
+
 ```bash
-# 変更があったディレクトリをバンドル
-python scripts/bundle.py --root ./src/auth --out bundle.txt
+python scripts/pack.py
+# → pack.txt が生成される
 ```
 
 AI に以下を **1 メッセージで** 貼り付けて送信する。
@@ -35,7 +37,7 @@ AI に以下を **1 メッセージで** 貼り付けて送信する。
 1. `prompts/diagrams-upsert.md` の全文
 2. 既存の `diagrams/class-diagram.md` の全文
 3. 既存の `diagrams/call-graph.md` の全文
-4. `bundle.txt` の内容
+4. `pack.txt` の内容
 
 応答から `class-diagram.md` / `call-graph.md` を `diagrams/` に上書き保存する。
 
@@ -51,4 +53,4 @@ AI に以下を **1 メッセージで** 貼り付けて送信する。
 - 特定ディレクトリだけ更新する場合 → [update-partial.md](update-partial.md)
 - エントリを削除するには → [delete-entries.md](delete-entries.md)
 - マスタが肥大化した場合 → [split-diagrams.md](split-diagrams.md)
-- bundle.py の全オプション → [../reference/bundle-py.md](../reference/bundle-py.md)
+- pack.py の全オプション → [../reference/pack.md](../reference/pack.md)

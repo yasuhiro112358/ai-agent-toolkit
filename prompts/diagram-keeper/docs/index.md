@@ -26,11 +26,12 @@
 
 | やりたいこと | 参照先 |
 | --- | --- |
-| bundle.py のオプションを確認したい | [reference/bundle-py.md](reference/bundle-py.md) |
+| pack.py のオプションを確認したい | [reference/pack.md](reference/pack.md) |
 | プロンプトファイルの仕様を確認したい | [reference/prompts.md](reference/prompts.md) |
 | マスタ2枚の仕様を確認したい | [reference/diagram-spec.md](reference/diagram-spec.md) |
 | 対応言語・制約条件を確認したい | [reference/constraints.md](reference/constraints.md) |
 | なぜこの設計になっているかを理解したい | [explanation/architecture-overview.md](explanation/architecture-overview.md) |
+| pack.py / pack.cfg の設計判断を確認したい | [explanation/pack-design.md](explanation/pack-design.md) |
 
 ---
 
