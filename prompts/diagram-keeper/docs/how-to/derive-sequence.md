@@ -11,7 +11,7 @@
 ```mermaid
 sequenceDiagram
     actor 利用者
-    participant AI as 対話型 AI
+    participant AI as 生成 AI
 
     利用者->>AI: diagrams-convert-to-sequence.md + マスタ2枚 + シナリオ指示を貼り付け
     AI-->>利用者: sequenceDiagram ブロックを返す

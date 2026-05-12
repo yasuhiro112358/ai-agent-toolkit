@@ -145,7 +145,7 @@ Claude Code 不要で使える単体プロンプト。
 | 名前 | 概要 | 依存 |
 |------|------|------|
 | [generate-prompt-from-conversation](prompts/generate-prompt-from-conversation.md) | 完了した AI 作業から再利用可能なプロンプトを生成 | なし |
-| [diagram-keeper](prompts/diagram-keeper/) | 対話型 AI でクラス図・コールグラフ（Mermaid）を生成・維持管理し、コードの変化と同期し続ける | Python 3.8+、VS Code + Mermaid Chart 拡張 |
+| [diagram-keeper](prompts/diagram-keeper/) | 生成 AI でクラス図・コールグラフ（Mermaid）を生成・維持管理し、コードの変化と同期し続ける | Python 3.8+、VS Code + Mermaid Chart 拡張 |
 | [task-management](prompts/task-management/) | チャット AI（Claude.ai・ChatGPT 等）に貼り付けるだけで動くプロンプト駆動タスク管理システム。API キー・サーバー不要 | なし |
 
 ---

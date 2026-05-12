@@ -11,7 +11,7 @@
 ```mermaid
 sequenceDiagram
     actor 利用者
-    participant AI as 対話型 AI
+    participant AI as 生成 AI
 
     利用者->>AI: diagrams-upsert.md + マスタ + bundle-001.txt を貼り付け
     AI-->>利用者: class-diagram.md + call-graph.md を返す

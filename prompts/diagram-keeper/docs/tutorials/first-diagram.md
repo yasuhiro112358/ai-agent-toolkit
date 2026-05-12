@@ -4,7 +4,7 @@
 
 `bundle.py` でサンプルコードをバンドルし、AI でクラス図とコールグラフを初めて作る。所要時間: 約 10〜15 分。
 
-前提: Python 3.8 以上・VS Code + Mermaid Chart 拡張（`MermaidChart.vscode-mermaid-chart`）・対話型 AI（Claude.ai 等）
+前提: Python 3.8 以上・VS Code + Mermaid Chart 拡張（`MermaidChart.vscode-mermaid-chart`）・生成 AI（Claude.ai 等）
 
 ---
 
@@ -58,7 +58,7 @@ Classes: AuthManager
 
 ## Step 3: AI にプロンプトとバンドルを貼り付ける
 
-対話型 AI（Claude.ai 等）の入力欄に以下を **1 メッセージで** 貼り付けて送信する。
+生成 AI（Claude.ai 等）の入力欄に以下を **1 メッセージで** 貼り付けて送信する。
 
 1. `prompts/diagrams-upsert.md` の全文
 2. 「マスタ未作成」（初回のため既存マスタは不要）

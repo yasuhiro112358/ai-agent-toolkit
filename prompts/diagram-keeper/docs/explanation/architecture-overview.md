@@ -8,7 +8,7 @@
 
 ## 背景と目的
 
-コードベースの依存関係を可視化し、設計レビュー・オンボーディング・アーキテクチャ分析に活用できる資料を作りたかった。職場環境においてインターネット接続・API キー利用・外部アカウント登録に制約があるため、対話型生成 AI（UI のみ）とローカルツールで完結する構成を前提として設計した。
+コードベースの依存関係を可視化し、設計レビュー・オンボーディング・アーキテクチャ分析に活用できる資料を作りたかった。職場環境においてインターネット接続・API キー利用・外部アカウント登録に制約があるため、生成 AI（UI のみ）とローカルツールで完結する構成を前提として設計した。
 
 ## 全体アーキテクチャ
 
@@ -16,7 +16,7 @@
 sequenceDiagram
     actor 管理者
     participant Script as bundle.py
-    participant AI as 対話型 AI
+    participant AI as 生成 AI
     participant Repo as diagrams/
 
     管理者->>Script: python bundle.py --root ./src

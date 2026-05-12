@@ -4,7 +4,7 @@
 
 `diagrams/class-diagram.md` と `diagrams/call-graph.md` が手元にある状態から始める。マスタ図を読んで、シーケンス図を派生させるまでを体験する。
 
-前提: VS Code + Mermaid Chart 拡張（`MermaidChart.vscode-mermaid-chart`）・対話型 AI（Claude.ai 等）・マスタ2枚が手元にあること
+前提: VS Code + Mermaid Chart 拡張（`MermaidChart.vscode-mermaid-chart`）・生成 AI（Claude.ai 等）・マスタ2枚が手元にあること
 
 ---
 
@@ -51,7 +51,7 @@
 
 ## Step 4: シーケンス図を派生させる
 
-対話型 AI の入力欄に以下を **1 メッセージで** 貼り付けて送信する。
+生成 AI の入力欄に以下を **1 メッセージで** 貼り付けて送信する。
 
 1. `prompts/diagrams-convert-to-sequence.md` の全文
 2. `diagrams/class-diagram.md` の全文

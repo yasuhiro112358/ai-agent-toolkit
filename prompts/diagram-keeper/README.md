@@ -1,4 +1,4 @@
-# 対話型生成AIによるコード依存関係分析ツール
+# 生成 AIによるコード依存関係分析ツール
 
 コードベースの依存関係を、AI との会話だけでクラス図・コールグラフとして可視化・維持管理するツール。
 成果物は Mermaid 形式の `.md` ファイルとしてリポジトリに保存される。API キー・外部サービス不要。
@@ -16,7 +16,7 @@
 **利用者**
 
 - VS Code + [Mermaid Chart 拡張](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart)
-- 対話型 AI（Claude.ai / ChatGPT 等の UI）
+- 生成 AI（Claude.ai / ChatGPT 等の UI）
 
 **管理者**（上記に加えて）
 

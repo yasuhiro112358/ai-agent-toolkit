@@ -56,7 +56,7 @@
 | --- | --- |
 | 管理者 | Python 3.8 以上（標準ライブラリのみ） |
 | 全員 | VS Code + Mermaid Chart 拡張（`MermaidChart.vscode-mermaid-chart`） |
-| 全員 | 対話型 AI（Claude.ai / ChatGPT 等）へのアクセス |
+| 全員 | 生成 AI（Claude.ai / ChatGPT 等）へのアクセス |
 | ネットワーク | 外部ネットワーク接続不要でローカル完結 |
 | 追加インストール | VS Code エクステンションのみ |
 
