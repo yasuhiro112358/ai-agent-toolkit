@@ -14,7 +14,7 @@
     - 初回実行時は「マスタ未作成」と利用者が宣言します。その場合は空の状態から新規作成してください
 2. **コードバンドル**: `bundle.py` が出力した MANIFEST 形式
 
-```
+```text
 === MANIFEST ===
 File: <相対パス>
 Classes: <抽出可能なクラス名のカンマ区切り>
@@ -33,7 +33,7 @@ Classes: <抽出可能なクラス名のカンマ区切り>
 **言語別の依存関係抽出ガイド**（コードを読む際の参考）:
 
 | 言語 | 継承・実装 | 依存の記述形式 |
-|------|-----------|--------------|
+| --- | --- | --- |
 | C / C++ | クラス継承（`: public Base`）、前方宣言 | `#include` |
 | Java | `extends` / `implements` | `import` |
 | C# | `: Base` / `: IFoo` | `using` |
@@ -41,7 +41,7 @@ Classes: <抽出可能なクラス名のカンマ区切り>
 | Python | クラス定義の括弧内（`class Foo(Base):`） | `import` / `from … import` |
 | TypeScript | `extends` / `implements` | `import` |
 | JavaScript | `extends` | `import` / `require` |
-| PHP | `extends` / `implements` | `use`（名前空間）|
+| PHP | `extends` / `implements` | `use`（名前空間） |
 | Rust | `impl Trait for Type` | `use` |
 
 # 出力するマスタ
@@ -50,36 +50,36 @@ Classes: <抽出可能なクラス名のカンマ区切り>
 
 - **Mermaid 記法**: `classDiagram`
 - **含める情報**:
-    - クラス名・可視性（public / private / protected）
-    - 属性（名前・型・可視性）
-    - メソッド（名前・戻り値・引数・可視性）
-    - 関係: 継承（`<|--`）、インターフェース実装（`<|..`）、合成（`*--`）、集約（`o--`）、依存（`..>`）
+  - クラス名・可視性（public / private / protected）
+  - 属性（名前・型・可視性）
+  - メソッド（名前・戻り値・引数・可視性）
+  - 関係: 継承（`<|--`）、インターフェース実装（`<|..`）、合成（`*--`）、集約（`o--`）、依存（`..>`）
 - **含めない情報**:
-    - メソッド単位の呼び出し関係（これはマスタ 2 の役割）
-    - 実装の詳細・コメント・アルゴリズム
+  - メソッド単位の呼び出し関係（これはマスタ 2 の役割）
+  - 実装の詳細・コメント・アルゴリズム
 - **粒度**:
-    - 詳細設計〜実装レベルに統一。資料用抽象度と実装レベルを混在させない
-    - 外部ライブラリは依存先として一段のみ（深追いしない）
+  - 詳細設計〜実装レベルに統一。資料用抽象度と実装レベルを混在させない
+  - 外部ライブラリは依存先として一段のみ（深追いしない）
 
 ## マスタ 2: コールグラフ (`diagrams/call-graph.md`)
 
 - **Mermaid 記法**: `flowchart LR`
 - **含める情報**:
-    - ノード = メソッド（`ClassName.methodName` 形式の文字列）
-    - エッジ = 静的に追える呼び出し関係（有向）
-    - private / public 問わず、コード内で確定できる呼び出しは全て含める
-    - 呼び出し先が外部ライブラリの場合は末端ノードとして一段のみ表示
+  - ノード = メソッド（`ClassName.methodName` 形式の文字列）
+  - エッジ = 静的に追える呼び出し関係（有向）
+  - private / public 問わず、コード内で確定できる呼び出しは全て含める
+  - 呼び出し先が外部ライブラリの場合は末端ノードとして一段のみ表示
 - **含めない情報**:
-    - 時系列・順序（順番ではなく「呼ぶ／呼ばない」の事実のみ）
-    - 戻り値・例外・返却値
-    - 条件分岐（if / switch / try-catch）の構造。分岐先の両方に呼び出しがあれば両方エッジとして含めるが、分岐の存在は記述しない
-    - ループ・再帰の繰り返し（1 エッジで表現）
+  - 時系列・順序（順番ではなく「呼ぶ／呼ばない」の事実のみ）
+  - 戻り値・例外・返却値
+  - 条件分岐（if / switch / try-catch）の構造。分岐先の両方に呼び出しがあれば両方エッジとして含めるが、分岐の存在は記述しない
+  - ループ・再帰の繰り返し（1 エッジで表現）
 - **粒度**:
-    - ノード粒度はメソッド単位で統一。クラス単位に集約しない
-    - 自己ループ（同じクラス内の呼び出し）も含める
-    - 外部 I/O（ネットワーク・DB）は呼び出し先ノードとして 1 段表現
+  - ノード粒度はメソッド単位で統一。クラス単位に集約しない
+  - 自己ループ（同じクラス内の呼び出し）も含める
+  - 外部 I/O（ネットワーク・DB）は呼び出し先ノードとして 1 段表現
 - **パッケージ表現（任意）**:
-    - 情報が明確な場合のみ `subgraph <packageName>` でグループ化。判断がつかない場合は省略
+  - 情報が明確な場合のみ `subgraph <packageName>` でグループ化。判断がつかない場合は省略
 
 # Upsert の具体ルール
 
@@ -101,31 +101,34 @@ Classes: <抽出可能なクラス名のカンマ区切り>
 各ファイルの中身は以下のフロントマター＋本文とする:
 
 - `class-diagram.md`:
-    ```
-    ---
-    title: クラス図
-    kind: master
-    scope: project-wide
-    generated_from: code (via diagrams-upsert.md)
-    ---
 
-    # クラス図
+  ```yaml
+  ---
+  title: クラス図
+  kind: master
+  scope: project-wide
+  generated_from: code (via diagrams-upsert.md)
+  ---
 
-    （Mermaid classDiagram ブロック）
-    ```
+  # クラス図
+
+  （Mermaid classDiagram ブロック）
+  ```
+
 - `call-graph.md`:
-    ```
-    ---
-    title: コールグラフ
-    kind: master
-    scope: project-wide
-    generated_from: code (via diagrams-upsert.md)
-    ---
 
-    # コールグラフ
+  ```yaml
+  ---
+  title: コールグラフ
+  kind: master
+  scope: project-wide
+  generated_from: code (via diagrams-upsert.md)
+  ---
 
-    （Mermaid flowchart LR ブロック）
-    ```
+  # コールグラフ
+
+  （Mermaid flowchart LR ブロック）
+  ```
 
 # 禁止事項
 

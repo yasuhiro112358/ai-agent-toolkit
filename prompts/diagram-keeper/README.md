@@ -5,20 +5,22 @@
 
 ## 2 つのロール
 
-**利用者**（図を読む・活用する）
+## 利用者（図を読む・活用する）
+
 既存のクラス図・コールグラフを VS Code でプレビューし、任意のシナリオのシーケンス図をオンデマンドで派生させる。`bundle.py` 不要。
 
-**管理者**（図を作る・維持する）
+## 管理者（図を作る・維持する）
+
 コード変更のたびに `bundle.py` でソースをバンドルし、AI にプロンプトと合わせて貼り付けてマスタ図を更新する。9 言語対応（C/C++・Java・C#・Python・TypeScript・JavaScript・PHP・Rust・Visual Basic）。
 
 ## 前提環境
 
-**利用者**
+### 利用者
 
 - VS Code + [Mermaid Chart 拡張](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart)
 - 生成 AI（Claude.ai・ChatGPT 等）
 
-**管理者**（上記に加えて）
+### 管理者（上記に加えて）
 
 - Python 3.8 以上（標準ライブラリのみ）
 

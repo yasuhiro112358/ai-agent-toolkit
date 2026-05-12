@@ -53,7 +53,8 @@
 応答の末尾に、実際に削除した対象を箇条書きで 1〜5 項目まで示してください（多数の場合はサマリー）。
 
 例:
-```
+
+```text
 削除済み:
 - クラス LegacyUser（class-diagram + call-graph）
 - メソッド AuthManager.oldLogin（call-graph から 3 エッジ除去）
