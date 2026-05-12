@@ -49,7 +49,7 @@ sequenceDiagram
 
 ← [diagram-keeper/ に戻る](../index.md)
 
-- なぜ直接生成方式か → [direct-generation.md](direct-generation.md)
+- なぜ図を中間表現として選ぶか → [diagram-as-intermediate.md](diagram-as-intermediate.md)
 - なぜ 2 枚構成か → [two-diagram-design.md](two-diagram-design.md)
 - シーケンス図をマスタに含めない理由 → [sequence-as-derived.md](sequence-as-derived.md)
 - なぜ一括投入型か → [batch-input.md](batch-input.md)
