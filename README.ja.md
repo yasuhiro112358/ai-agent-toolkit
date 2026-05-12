@@ -18,6 +18,18 @@
 
 ---
 
+## プロンプト
+
+Claude Code 不要で使える単体プロンプト。ファイル内容をそのままチャット AI に貼り付けて使います。
+
+| 名前 | 概要 | 依存 |
+| --- | --- | --- |
+| [diagram-keeper](prompts/diagram-keeper/) | 生成 AI でコードのクラス図・コールグラフ（Mermaid）を生成・維持管理し、コードの変化と同期し続ける | Python 3.8+、VS Code + Mermaid Chart 拡張 |
+| [prompt-create-from-conversation](prompts/prompt-create-from-conversation/) | 完了した AI 作業から再利用可能なプロンプトを生成 | なし |
+| [task-management](prompts/task-management/) | チャット AI（Claude.ai・ChatGPT 等）に貼り付けるだけで動くプロンプト駆動タスク管理システム。API キー・サーバー不要 | なし |
+
+---
+
 ## スキル一覧
 
 | 名前 | カテゴリ | 概要 | 依存 |
@@ -31,18 +43,6 @@
 | 名前 | 概要 | 必要なツール |
 | --- | --- | --- |
 | *(準備中)* | - | - |
-
----
-
-## プロンプト
-
-Claude Code 不要で使える単体プロンプト。ファイル内容をそのままチャット AI に貼り付けて使います。
-
-| 名前 | 概要 | 依存 |
-| --- | --- | --- |
-| [diagram-keeper](prompts/diagram-keeper/) | 生成 AI でコードのクラス図・コールグラフ（Mermaid）を生成・維持管理し、コードの変化と同期し続ける | Python 3.8+、VS Code + Mermaid Chart 拡張 |
-| [prompt-create-from-conversation](prompts/prompt-create-from-conversation/) | 完了した AI 作業から再利用可能なプロンプトを生成 | なし |
-| [task-management](prompts/task-management/) | チャット AI（Claude.ai・ChatGPT 等）に貼り付けるだけで動くプロンプト駆動タスク管理システム。API キー・サーバー不要 | なし |
 
 ---
 
