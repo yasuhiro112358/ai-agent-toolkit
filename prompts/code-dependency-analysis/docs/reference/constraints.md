@@ -15,7 +15,7 @@
 | 外部アカウント | 利用不可 |
 | 実行環境 | ローカル完結（VS Code + Python） |
 
-> これらの制約がこのツールの設計の出発点。詳細は [../explanation/design-decisions.md](../explanation/design-decisions.md) 参照。
+> これらの制約がこのツールの設計の出発点。詳細は [../explanation/architecture-overview.md](../explanation/architecture-overview.md) 参照。
 
 ---
 
@@ -77,5 +77,5 @@
 
 ← [code-dependency-analysis/ に戻る](../index.md)
 
-- なぜこれらの制約のもとでこの設計になったか → [../explanation/design-decisions.md](../explanation/design-decisions.md)
+- なぜこれらの制約のもとでこの設計になったか → [../explanation/architecture-overview.md](../explanation/architecture-overview.md)
 - bundle.py の対象拡張子オプション → [bundle-py.md](bundle-py.md)
