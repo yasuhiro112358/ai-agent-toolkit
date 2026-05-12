@@ -10,25 +10,20 @@
 
 ```mermaid
 sequenceDiagram
-    actor 利用者
+    actor 管理者
     participant AI as 生成 AI
+    participant Repo as diagrams/
 
-    利用者->>AI: diagrams-upsert.md + マスタ + bundle-001.txt を貼り付け
-    AI-->>利用者: class-diagram.md + call-graph.md を返す
-    利用者->>利用者: diagrams/ に保存
-
-    loop 次のチャンクがある間
-        利用者->>AI: diagrams-upsert.md + 前ステップのマスタ + bundle-00N.txt を貼り付け
-        AI-->>利用者: class-diagram.md + call-graph.md を返す
-        利用者->>利用者: diagrams/ に上書き保存
-    end
-
-    利用者->>利用者: VS Code でプレビュー確認・Git コミット
+    管理者->>管理者: bundle.py でバンドルを生成
+    管理者->>AI: diagrams-upsert.md + マスタ2枚 + bundle.txt を貼り付け
+    AI-->>管理者: class-diagram.md + call-graph.md を返す
+    管理者->>Repo: 上書き保存
+    管理者->>管理者: VS Code でプレビュー確認・Git コミット
 ```
 
 ---
 
-## 通常の更新
+## 手順
 
 ```bash
 # 変更があったディレクトリをバンドル
@@ -48,42 +43,12 @@ AI に以下を **1 メッセージで** 貼り付けて送信する。
 
 ---
 
-## 大規模コードをチャンク分割して投入する
-
-コードが大きく 1 回の貼り付けに収まらない場合、`--max-chars` でチャンク分割してから繰り返し投入する。
-
-```bash
-python scripts/bundle.py --root ./src --out bundle.txt --max-chars 50000
-# → bundle-001.txt, bundle-002.txt, ... が生成される
-```
-
-投入手順:
-
-```text
-1. bundle-001.txt を Upsert → class-diagram.md, call-graph.md を保存
-2. 前ステップの出力をマスタとして bundle-002.txt を Upsert → 上書き保存
-3. 全チャンクが終わるまで繰り返す
-4. VS Code でプレビュー確認 → Git コミット
-```
-
-> チャンクごとに「既存マスタ = 前ステップの出力」を使うこと。初回投入のマスタを使い回すとエントリが失われる。
-
----
-
-## 特定ディレクトリだけ更新する
-
-```bash
-python scripts/bundle.py --root ./src \
-  --include 'auth/*' \
-  --out bundle-auth.txt
-```
-
----
-
 ## 関連
 
 ← [diagram-keeper/ に戻る](../index.md)
 
+- コードが大きく1回に収まらない場合 → [update-with-chunks.md](update-with-chunks.md)
+- 特定ディレクトリだけ更新する場合 → [update-partial.md](update-partial.md)
 - エントリを削除するには → [delete-entries.md](delete-entries.md)
 - マスタが肥大化した場合 → [split-diagrams.md](split-diagrams.md)
 - bundle.py の全オプション → [../reference/bundle-py.md](../reference/bundle-py.md)

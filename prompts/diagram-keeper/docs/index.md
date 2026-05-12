@@ -17,6 +17,8 @@
 | --- | --- |
 | 初めてマスタ図を作りたい | [tutorials/first-diagram.md](tutorials/first-diagram.md) |
 | コード変更後にマスタを更新したい | [how-to/update-diagrams.md](how-to/update-diagrams.md) |
+| 大規模コードをチャンク分割して更新したい | [how-to/update-with-chunks.md](how-to/update-with-chunks.md) |
+| 特定ディレクトリだけ更新したい | [how-to/update-partial.md](how-to/update-partial.md) |
 | コードを削除したのでマスタからも消したい | [how-to/delete-entries.md](how-to/delete-entries.md) |
 | マスタが肥大化したので分割したい | [how-to/split-diagrams.md](how-to/split-diagrams.md) |
 

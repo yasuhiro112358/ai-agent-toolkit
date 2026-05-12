@@ -21,19 +21,7 @@
 
 ## 対応言語
 
-| 言語 | 依存関係の記述形式 |
-| --- | --- |
-| C / C++ | `#include`（ヘッダ）、継承、前方宣言 |
-| Java | `import`、`extends` / `implements`、パッケージ宣言 |
-| C# | `using`、`namespace`、継承・インターフェース実装 |
-| Visual Basic | `Imports`、`Inherits`、`Implements`、`Namespace` |
-| Python | `import` / `from … import`、継承（クラス定義の括弧内） |
-| TypeScript | `import`、`extends`、`implements` |
-| JavaScript | `import` / `require`、`extends` |
-| PHP | `use`（名前空間）、`extends`、`implements`、`namespace` |
-| Rust | `use`、`impl`、`trait` 実装（`impl Trait for Type`） |
-
-対象拡張子の詳細は [bundle-py.md](bundle-py.md) 参照。
+対応言語の一覧は [reference/bundle-py.md](bundle-py.md) 参照。
 
 ---
 
@@ -44,8 +32,8 @@
 | 依存関係の自動修正 | スコープ外 |
 | API を使った完全自動化 | UI のみ利用のため |
 | クラウド同期・共有 | MermaidChart アカウント必須のため |
-| PlantUML | Java ローカルインストールが必要 |
-| Graphviz / DOT 形式 | VS Code 公式エクステンションのサポートが弱い |
+| PlantUML | [mermaid-choice.md](../explanation/mermaid-choice.md) 参照 |
+| Graphviz / DOT 形式 | [mermaid-choice.md](../explanation/mermaid-choice.md) 参照 |
 | 状態機械図・コンポーネント図・ER 図・ユースケース図等 | マスタに含めない。必要になったら個別対応を検討 |
 
 ---
