@@ -61,18 +61,6 @@ Standalone prompts — no Claude Code required. Paste the file contents into any
 
 ---
 
-## Contributing
-
-Contributions are welcome! Please open an issue or pull request.
-
-When contributing a skill, ensure:
-
-- No personal information or private file paths
-- No dependencies on private repositories
-- Self-contained and usable in any project
-
----
-
 ## License
 
 MIT License — see [LICENSE](LICENSE) for details.
