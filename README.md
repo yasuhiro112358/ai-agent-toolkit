@@ -18,21 +18,6 @@ This repository contains [Claude Code](https://claude.ai/code) skills (`SKILL.md
 
 ---
 
-## Quick Start
-
-```bash
-# Clone the repository
-git clone https://github.com/yasuhiro112358/claude-code-skills.git
-
-# Copy a skill to your Claude Code skills directory
-cp -r claude-code-skills/skills/smart-commit ~/.claude/skills/
-
-# Now use it in Claude Code
-# /smart-commit
-```
-
----
-
 ## Prompts
 
 Standalone prompts — no Claude Code required. Paste the file contents into any chat AI.

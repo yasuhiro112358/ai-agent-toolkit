@@ -18,21 +18,6 @@
 
 ---
 
-## クイックスタート
-
-```bash
-# リポジトリをクローン
-git clone https://github.com/yasuhiro112358/claude-code-skills.git
-
-# スキルを Claude Code のスキルディレクトリにコピー
-cp -r claude-code-skills/skills/smart-commit ~/.claude/skills/
-
-# Claude Code で呼び出す
-# /smart-commit
-```
-
----
-
 ## スキル一覧
 
 | 名前 | カテゴリ | 概要 | 依存 |
