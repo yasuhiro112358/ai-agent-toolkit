@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > how-to
+[diagram-keeper/](../index.md) > how-to
 
 # How-to: エントリを削除する（Delete）
 
@@ -55,7 +55,7 @@ Upsert（`diagrams-upsert.md`）はエントリの「更新」であり、削除
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - マスタを更新するには → [update-diagrams.md](update-diagrams.md)
 - Delete プロンプトの詳細な挙動 → [../reference/prompts.md](../reference/prompts.md)

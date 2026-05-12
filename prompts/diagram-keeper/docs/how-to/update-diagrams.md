@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > how-to
+[diagram-keeper/](../index.md) > how-to
 
 # How-to: マスタを更新する（Upsert）
 
@@ -82,7 +82,7 @@ python scripts/bundle.py --root ./src \
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - エントリを削除するには → [delete-entries.md](delete-entries.md)
 - マスタが肥大化した場合 → [split-diagrams.md](split-diagrams.md)

@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > reference
+[diagram-keeper/](../index.md) > reference
 
 # Reference: bundle.py
 
@@ -108,7 +108,7 @@ bundle-003.txt
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - チャンク Upsert の手順 → [../how-to/update-diagrams.md](../how-to/update-diagrams.md)
 - 対応言語・制約条件の詳細 → [constraints.md](constraints.md)

@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > explanation
+[diagram-keeper/](../index.md) > explanation
 
 # Explanation: ツールの背景と全体設計
 
@@ -41,7 +41,7 @@ sequenceDiagram
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - なぜ直接生成方式か → [direct-generation.md](direct-generation.md)
 - なぜ 2 枚構成か → [two-diagram-design.md](two-diagram-design.md)

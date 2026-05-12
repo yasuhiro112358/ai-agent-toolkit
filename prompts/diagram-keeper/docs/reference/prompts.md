@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > reference
+[diagram-keeper/](../index.md) > reference
 
 # Reference: プロンプトファイル
 
@@ -83,7 +83,7 @@
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - クラス図・コールグラフの仕様 → [diagram-spec.md](diagram-spec.md)
 - Upsert 手順 → [../how-to/update-diagrams.md](../how-to/update-diagrams.md)

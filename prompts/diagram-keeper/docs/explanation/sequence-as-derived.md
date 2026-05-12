@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > explanation
+[diagram-keeper/](../index.md) > explanation
 
 # Explanation: シーケンス図をマスタに含めない理由
 
@@ -21,7 +21,7 @@
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - シーケンス図の派生手順 → [../how-to/derive-sequence.md](../how-to/derive-sequence.md)
 - なぜ 2 枚構成か → [two-diagram-design.md](two-diagram-design.md)

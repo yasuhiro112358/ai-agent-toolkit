@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > tutorials
+[diagram-keeper/](../index.md) > tutorials
 
 # Tutorial: 初めてのマスタ図作成
 
@@ -107,7 +107,7 @@ classDiagram
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - コード変更後にマスタを更新するには → [../how-to/update-diagrams.md](../how-to/update-diagrams.md)
 - シーケンス図をオンデマンドで生成するには → [../how-to/derive-sequence.md](../how-to/derive-sequence.md)

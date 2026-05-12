@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > how-to
+[diagram-keeper/](../index.md) > how-to
 
 # How-to: マスタを分割・統合する
 
@@ -53,7 +53,7 @@ Upsert 時の指示に「全パッケージを1枚に統合して」を加える
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - マスタを更新する基本手順 → [update-diagrams.md](update-diagrams.md)
 - クラス図・コールグラフの仕様 → [../reference/diagram-spec.md](../reference/diagram-spec.md)

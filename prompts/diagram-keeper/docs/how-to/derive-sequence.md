@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > how-to
+[diagram-keeper/](../index.md) > how-to
 
 # How-to: シーケンス図を派生させる
 
@@ -60,7 +60,7 @@ AI が `sequenceDiagram` ブロックを含む Mermaid を返す。
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - シーケンス図をマスタに含めない設計理由 → [../explanation/sequence-as-derived.md](../explanation/sequence-as-derived.md)
 - 派生プロンプトの仕様 → [../reference/prompts.md](../reference/prompts.md)

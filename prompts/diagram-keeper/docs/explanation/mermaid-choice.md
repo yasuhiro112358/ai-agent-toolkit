@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > explanation
+[diagram-keeper/](../index.md) > explanation
 
 # Explanation: なぜ Mermaid か
 
@@ -18,7 +18,7 @@
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - ツールの背景と全体設計 → [architecture-overview.md](architecture-overview.md)
 - 制約条件・対象外 → [../reference/constraints.md](../reference/constraints.md)

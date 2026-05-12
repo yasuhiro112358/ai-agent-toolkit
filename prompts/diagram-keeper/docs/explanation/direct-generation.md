@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > explanation
+[diagram-keeper/](../index.md) > explanation
 
 # Explanation: なぜ直接生成方式か
 
@@ -21,7 +21,7 @@
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - ツールの背景と全体設計 → [architecture-overview.md](architecture-overview.md)
 - なぜ 2 枚構成か → [two-diagram-design.md](two-diagram-design.md)

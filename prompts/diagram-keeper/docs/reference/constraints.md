@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > reference
+[diagram-keeper/](../index.md) > reference
 
 # Reference: 制約条件・対象範囲
 
@@ -75,7 +75,7 @@
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - なぜこれらの制約のもとでこの設計になったか → [../explanation/architecture-overview.md](../explanation/architecture-overview.md)
 - bundle.py の対象拡張子オプション → [bundle-py.md](bundle-py.md)

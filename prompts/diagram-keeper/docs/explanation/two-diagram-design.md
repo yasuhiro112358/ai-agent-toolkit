@@ -1,4 +1,4 @@
-[code-dependency-analysis/](../index.md) > explanation
+[diagram-keeper/](../index.md) > explanation
 
 # Explanation: なぜクラス図＋コールグラフの 2 枚構成か
 
@@ -23,7 +23,7 @@
 
 ## 関連
 
-← [code-dependency-analysis/ に戻る](../index.md)
+← [diagram-keeper/ に戻る](../index.md)
 
 - シーケンス図をマスタに含めない理由 → [sequence-as-derived.md](sequence-as-derived.md)
 - マスタ 2 枚の仕様 → [../reference/diagram-spec.md](../reference/diagram-spec.md)

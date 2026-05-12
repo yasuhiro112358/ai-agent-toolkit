@@ -1,4 +1,4 @@
-# code-dependency-analysis/
+# diagram-keeper/
 
 コードベースの依存関係を、AI との会話だけでクラス図・コールグラフとして可視化・維持管理するツールのドキュメント。
 [Diátaxis](https://diataxis.fr/) フレームワーク（tutorials / how-to / reference / explanation）で構造化。
