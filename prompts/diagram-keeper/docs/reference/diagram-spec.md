@@ -2,7 +2,7 @@
 
 # Reference: マスタ図仕様
 
-マスタとして管理する2枚の図（クラス図・コールグラフ）の仕様、ファイルレイアウト、スケーリング方針。
+マスタとして管理する2枚の図（クラス図・コールグラフ）の仕様とスケーリング方針。
 
 ---
 
@@ -58,31 +58,6 @@ flowchart LR
   AuthManager.authenticate --> AuthToken.issue
   AuthManager.authenticate --> Database.saveSession
   IAuthProvider.validate --> CryptoLib.verify
-```
-
----
-
-## ファイルレイアウト
-
-既定（分割なし）:
-
-```text
-diagrams/
-├── class-diagram.md      # マスタ1: クラス図
-├── call-graph.md         # マスタ2: コールグラフ
-└── sequences/
-    └── <name>.md         # 派生シーケンス図（保存したいものだけ）
-```
-
-分割後:
-
-```text
-diagrams/
-├── package-diagram.md            # パッケージ間の全体俯瞰
-├── class-<packageName>.md        # パッケージ単位のクラス図
-├── call-graph-<packageName>.md   # パッケージ単位のコールグラフ
-└── sequences/
-    └── <name>.md
 ```
 
 ---
