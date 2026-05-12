@@ -78,3 +78,4 @@ python scripts/pack.py
 
 - 通常の更新手順（1回で収まる場合） → [update-diagrams.md](update-diagrams.md)
 - pack.py の全オプション → [../reference/pack.md](../reference/pack.md)
+- chunk_size の命名とデフォルト値の設計理由 → [../explanation/pack-chunk-size.md](../explanation/pack-chunk-size.md)

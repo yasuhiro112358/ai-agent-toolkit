@@ -25,3 +25,4 @@
 
 - シーケンス図の派生手順 → [../how-to/derive-sequence.md](../how-to/derive-sequence.md)
 - なぜ 2 枚構成か → [two-diagram-design.md](two-diagram-design.md)
+- ツールの背景と全体設計 → [architecture-overview.md](architecture-overview.md)

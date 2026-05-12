@@ -123,3 +123,5 @@ pack-003.txt
 
 - チャンク Upsert の手順 → [../how-to/update-with-chunks.md](../how-to/update-with-chunks.md)
 - 対応言語・制約条件の詳細 → [constraints.md](constraints.md)
+- スクリプト名の選定理由 → [../explanation/pack-naming.md](../explanation/pack-naming.md)
+- 設定ファイル方式の設計理由 → [../explanation/pack-cfg-design.md](../explanation/pack-cfg-design.md)
