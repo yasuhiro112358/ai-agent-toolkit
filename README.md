@@ -33,6 +33,18 @@ cp -r claude-code-skills/skills/smart-commit ~/.claude/skills/
 
 ---
 
+## Prompts
+
+Standalone prompts — no Claude Code required. Paste the file contents into any chat AI.
+
+| Name | Description | Dependencies |
+| --- | --- | --- |
+| [prompt-create-from-conversation](prompts/prompt-create-from-conversation/) | Generate a reusable prompt from a completed AI conversation | None |
+| [diagram-keeper](prompts/diagram-keeper/) | Generate and maintain Mermaid class diagrams and call graphs via generative AI, keeping them in sync as code evolves | Python 3.8+, VS Code + Mermaid Chart extension |
+| [task-management](prompts/task-management/) | Prompt-driven task management system that runs inside any chat AI — no API key, server, or custom app required | None |
+
+---
+
 ## Skills
 
 | Name | Category | Description | Dependencies |
@@ -46,18 +58,6 @@ cp -r claude-code-skills/skills/smart-commit ~/.claude/skills/
 | Name | Description | Tools Required |
 | --- | --- | --- |
 | *(coming soon)* | - | - |
-
----
-
-## Prompts
-
-Standalone prompts — no Claude Code required. Paste the file contents into any chat AI.
-
-| Name | Description | Dependencies |
-| --- | --- | --- |
-| [generate-prompt-from-conversation](prompts/generate-prompt-from-conversation.md) | Generate a reusable prompt from a completed AI conversation | None |
-| [diagram-keeper](prompts/diagram-keeper/) | Generate and maintain Mermaid class diagrams and call graphs via generative AI, keeping them in sync as code evolves | Python 3.8+, VS Code + Mermaid Chart extension |
-| [task-management](prompts/task-management/) | Prompt-driven task management system that runs inside any chat AI — no API key, server, or custom app required | None |
 
 ---
 
