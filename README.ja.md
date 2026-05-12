@@ -1,7 +1,6 @@
 # claude-code-skills
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/yasuhiro112358/claude-code-skills/pulls)
 
 再利用可能な Claude Code スキル・プロンプトのコレクションです。
 
