@@ -14,28 +14,24 @@
 ## 前提環境
 
 **利用者**
+
 - VS Code + [Mermaid Chart 拡張](https://marketplace.visualstudio.com/items?itemName=MermaidChart.vscode-mermaid-chart)
 - 対話型 AI（Claude.ai / ChatGPT 等の UI）
 
 **管理者**（上記に加えて）
+
 - Python 3.8 以上（標準ライブラリのみ）
 
 ## ドキュメント
 
-| カテゴリ | 内容 |
-|---------|------|
-| [チュートリアル](docs/tutorials/README.md) | 図を読む（利用者向け）・図を作る（管理者向け） |
-| [ハウツー](docs/how-to/README.md) | 図の更新・削除・シーケンス派生 |
-| [リファレンス](docs/reference/README.md) | bundle.py CLI・プロンプトファイル仕様 |
-| [解説](docs/explanation/design-decisions.md) | 設計の判断根拠 |
+→ [docs/index.md](docs/index.md)
 
 ## ファイル構成
 
-| ファイル | 役割 |
-|---------|------|
-| `requirements.md` | 要件確認書（SRS-lite） |
-| `bundle.py` | ソースツリーを MANIFEST 形式に変換 |
-| `diagrams-upsert.md` | マスタ 2 枚の Upsert（Create + Update） |
-| `diagrams-delete.md` | マスタ 2 枚の Delete |
-| `diagrams-convert-to-sequence.md` | マスタ 2 枚からシーケンス図を派生 |
+| パス | 役割 |
+| --- | --- |
+| `scripts/bundle.py` | ソースツリーを MANIFEST 形式に変換 |
+| `prompts/diagrams-upsert.md` | マスタ2枚の Upsert（Create + Update） |
+| `prompts/diagrams-delete.md` | マスタ2枚の Delete |
+| `prompts/diagrams-convert-to-sequence.md` | マスタ2枚からシーケンス図を派生 |
 | `docs/` | Diataxis 形式のドキュメント |

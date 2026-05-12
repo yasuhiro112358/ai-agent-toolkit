@@ -1,55 +1,66 @@
-[ドキュメント](../README.md) > [ハウツー](README.md) > シーケンス図を派生する
+[code-dependency-analysis/](../index.md) > how-to
 
-> **Diataxis: How-to** — マスタ 2 枚から特定シナリオのシーケンス図をオンデマンドで生成する。
+# How-to: シーケンス図を派生させる
 
-# ハウツー: シーケンス図を派生する
+マスタ2枚（クラス図・コールグラフ）から、特定シナリオのシーケンス図をオンデマンドで生成する。
 
-マスタ 2 枚（クラス図・コールグラフ）が揃っていれば、コードを再読み込みせずにシーケンス図を生成できる。
+---
+
+## 概要フロー
+
+```mermaid
+sequenceDiagram
+    actor 利用者
+    participant AI as 対話型 AI
+
+    利用者->>AI: diagrams-convert-to-sequence.md + マスタ2枚 + シナリオ指示を貼り付け
+    AI-->>利用者: sequenceDiagram ブロックを返す
+
+    opt 保存する場合
+        利用者->>利用者: diagrams/sequences/<name>.md に保存
+    end
+```
+
+---
 
 ## 手順
 
-```
-1. AI に以下を 1 メッセージで貼り付ける
-   - diagrams-convert-to-sequence.md の全文
-   - diagrams/class-diagram.md の全文
-   - diagrams/call-graph.md の全文
-   - シナリオ指示（自然言語）
+AI に以下を **1 メッセージで** 貼り付けて送信する。
 
-2. AI がシーケンス図を返す
+1. `prompts/diagrams-convert-to-sequence.md` の全文
+2. `diagrams/class-diagram.md` の全文
+3. `diagrams/call-graph.md` の全文
+4. シナリオ指示（自然言語）
 
-3. 一時用途なら保存せず使い捨て
-   保存する場合は diagrams/sequences/<name>.md に保存
-```
+AI が `sequenceDiagram` ブロックを含む Mermaid を返す。
+
+---
 
 ## シナリオ指示の書き方
 
 | 指定できる内容 | 例 |
-|-------------|-----|
+| --- | --- |
 | 起点メソッド | 「`AuthController.login` から始まる処理の時系列を描いて」 |
 | スコープ絞り込み | 「auth パッケージ内部の相互作用だけ」 |
 | 分岐の指定 | 「例外パス（認証失敗）のシナリオ」 |
 | 深さの指定 | 「起点は `Main.run`、深さは 3 階層まで」 |
 
-指示が曖昧な場合、AI は「起点を `<X>` と解釈しました」と冒頭で宣言してから描く。
+指示が曖昧な場合、AI は「起点を `<X>` と解釈しました」と宣言してから描く。
 
-## シーケンス図に含まれる情報
-
-- **含まれる**: コールグラフのエッジに存在する呼び出しチェーン（時系列化したもの）
-- **含まれない**: コールグラフに存在しない呼び出し（創作しない）
-
-時系列の順序はコールグラフが持たないため「メソッド本体の記述順に近い並び」を推定して構成される。完全な順序保証はできない点に注意。
+---
 
 ## 保存するかどうかの判断
 
 | 用途 | 判断 |
-|------|------|
-| 今の作業（設計レビュー・影響調査等）だけで使う | 保存しない（使い捨て） |
+| --- | --- |
+| 設計レビュー・影響調査など今の作業だけで使う | 保存しない（使い捨て） |
 | オンボーディング資料・設計書として継続参照する | `diagrams/sequences/<name>.md` に保存 |
-
-## 関連
-
-- [設計の判断: なぜシーケンス図はマスタに含めないか](../explanation/design-decisions.md#シーケンス図をマスタに含めない理由)
 
 ---
 
-[← ハウツー一覧](README.md) | [ドキュメント一覧](../README.md)
+## 関連
+
+← [code-dependency-analysis/ に戻る](../index.md)
+
+- シーケンス図をマスタに含めない設計理由 → [../explanation/design-decisions.md](../explanation/design-decisions.md)
+- 派生プロンプトの仕様 → [../reference/prompts.md](../reference/prompts.md)
