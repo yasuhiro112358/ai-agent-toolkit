@@ -1,8 +1,8 @@
-# claude-code-skills
+# ai-agent-toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A collection of reusable Claude Code skills and prompts.
+A collection of reusable prompts, skills, and agents for AI-powered workflows.
 
 [日本語版 / Japanese](README.ja.md)
 
@@ -10,10 +10,10 @@ A collection of reusable Claude Code skills and prompts.
 
 ## What is this?
 
-This repository contains [Claude Code](https://claude.ai/code) skills (`SKILL.md` format) and standalone prompts that you can use in your own projects.
+This repository contains prompts and skills you can use with any AI agent or generative AI service — Claude Code, Claude.ai, ChatGPT, and more.
 
 - **Claude Code users**: Copy a skill folder to `~/.claude/skills/` and invoke it with `/skill-name`
-- **Claude.ai / API users**: Copy the prompt content and paste it directly into a conversation
+- **Any chat AI users**: Copy the prompt content and paste it directly into a conversation
 
 ---
 

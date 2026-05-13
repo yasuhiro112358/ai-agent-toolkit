@@ -1,8 +1,8 @@
-# claude-code-skills
+# ai-agent-toolkit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-再利用可能な Claude Code スキル・プロンプトのコレクションです。
+AIエージェント・生成AIサービスで使える、再利用可能なプロンプト・スキル・エージェントのコレクションです。
 
 [English version](README.md)
 
@@ -10,10 +10,10 @@
 
 ## このリポジトリについて
 
-[Claude Code](https://claude.ai/code) のスキル（`SKILL.md` 形式）と単体プロンプトを公開しています。
+Claude Code、Claude.ai、ChatGPT など、あらゆるAIエージェント・チャットAIサービスで活用できるプロンプトとスキルを公開しています。
 
 - **Claude Code ユーザー向け**: スキルフォルダを `~/.claude/skills/` にコピーして `/スキル名` で呼び出す
-- **Claude.ai / API ユーザー向け**: `SKILL.md` のプロンプト本文をそのまま会話に貼り付けて使う
+- **その他のチャットAI ユーザー向け**: プロンプト本文をそのまま会話に貼り付けて使う
 
 ---
 
