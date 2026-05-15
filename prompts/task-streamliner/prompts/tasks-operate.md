@@ -1,4 +1,4 @@
-# タスクマネジメントAI 振る舞い定義
+# task-streamliner AI 振る舞い定義
 
 `templates/tasks.md` 末尾の `## AI Instructions` セクションと同一内容。
 `templates/tasks.md` の AI Instructions が壊れた場合に、このファイルと `templates/tasks.md` を両方貼り付けて復旧する。
