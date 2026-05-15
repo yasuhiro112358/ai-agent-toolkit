@@ -1,29 +1,31 @@
 # task-streamliner
 
-自然言語でタスクを管理するプロンプト駆動システム。
-`templates/tasks.md` 1ファイルをチャットUIに貼り付けるだけで動く。APIキー・サーバー・カスタムアプリ不要。
+Prompt-driven task management system that runs inside any chat AI.
+Paste a single file into Claude.ai, ChatGPT, or any chat UI — no API key, server, or custom app required.
 
-## 使い方
+[日本語版 / Japanese](README.ja.md)
 
-1. `templates/tasks.md` をテキストエディタで開く
-2. 全文をコピーしてチャットUI（Claude.ai / ChatGPT 等）に貼り付ける
-3. 送信する — AIが Inbox 処理とトリアージを自動実行する
-4. 自然言語で指示を出す
-5. 「出力して」と入力して返ってきた全文を `templates/tasks.md` に上書き保存する
+## How it works
 
-## 動作環境
+1. Open `templates/tasks.md` in a text editor
+2. Copy the entire file and paste it into a chat UI (Claude.ai, ChatGPT, etc.)
+3. Send — the AI automatically processes Inbox items and runs CPM scheduling
+4. Give instructions in natural language
+5. Type "output" to receive the full file, then overwrite `templates/tasks.md`
 
-- Claude.ai / ChatGPT 等の対話型チャットUI（アカウントのみ必要）
-- テキストエディタ
+## Requirements
 
-## ファイル構成
+- Any conversational chat AI (Claude.ai, ChatGPT, etc.) — account only
+- A text editor
 
-| パス | 役割 |
-| --- | --- |
-| `templates/tasks.md` | タスクデータ兼AIへの振る舞い定義（単一情報源） |
-| `prompts/tasks-operate.md` | 振る舞い定義の単体ファイル（`templates/tasks.md` の AI Instructions が壊れた場合の復旧用） |
-| `docs/` | ドキュメント（Diataxis 構成） |
-
-## ドキュメント
+## Documentation
 
 → [docs/index.md](docs/index.md)
+
+## File structure
+
+| Path | Role |
+| --- | --- |
+| `templates/tasks.md` | Task data + AI behavior definition (single source of truth) |
+| `prompts/tasks-operate.md` | Standalone behavior definition (recovery use only) |
+| `docs/` | Documentation (Diataxis structure) |
