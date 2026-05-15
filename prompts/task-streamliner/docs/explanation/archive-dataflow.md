@@ -8,7 +8,7 @@
 flowchart LR
     Source["tasks.md\n## WBS"]
     Select["対象サマリーを選定\n（全リーフが Done/Cancelled）"]
-    Archive["tasks-archive-YYYY-MM.md"]
+    Archive["tasks-archive-YYYY-MM-DD.md"]
     Cleaned["tasks.md\n## WBS（再採番済み）"]
 
     Source --> Select
@@ -24,9 +24,9 @@ flowchart LR
 
 | 項目 | 仕様 |
 | --- | --- |
-| 命名 | `tasks-archive-YYYY-MM.md`（アーカイブ実行月） |
+| 命名 | `tasks-archive-YYYY-MM-DD.md`（アーカイブ実行日） |
 | 形式 | `tasks.md` の WBS テーブルと同じ Markdown テーブル形式 |
-| 追記 | 同月ファイルが存在する場合は末尾に追記する |
+| 追記 | 同日ファイルが存在する場合は末尾に追記する |
 
 ## tasks.md 側の処理
 
