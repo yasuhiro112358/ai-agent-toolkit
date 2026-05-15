@@ -38,7 +38,7 @@ flowchart TD
 - `Waiting` は `depends_on` の未完了だけでなく、レビュー中・承認待ち・外部応答待ちなど任意の「待ち」を表す
 - 待ちが解消したとき、未着手に戻す場合は `Todo`、そのまま再着手する場合は `In-Progress` に遷移する
 - `Done` / `Cancelled` は終端状態。アーカイブ対象となる
-- `depends_on` の詳細は [schema.md](schema.md) を参照
+- `depends_on` の詳細は [wbs-fields.md](wbs-fields.md) を参照
 
 ---
 
