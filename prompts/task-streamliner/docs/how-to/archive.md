@@ -8,15 +8,19 @@ flowchart TD
     E([終了])
 
     S --> Trigger["「アーカイブして」と入力する"]
-    Trigger --> Return["AIが2つのコードブロックを返す\n① アーカイブ用内容\n② 整理後の tasks.md"]
-    Return --> CopyArchive["① をコピーして\ntasks-archive-YYYY-MM.md に追記保存する"]
-    CopyArchive --> Exists{同月のファイルが\nすでにある?}
-    Exists -- Yes --> Append["末尾に追記する"]
-    Exists -- No --> New["新規作成する"]
+    Trigger --> Return["AIが2つの内容を返す\n① アーカイブ用\n② 整理後のファイル"]
+    Return --> Exists{同月の archive\nファイルがある?}
+    Exists -- Yes --> Append["① を末尾に追記する"]
+    Exists -- No --> New["① で新規作成する"]
     Append --> CopyTasks
-    New --> CopyTasks["② をコピーして\ntemplates/tasks.md に上書き保存する"]
+    New --> CopyTasks["② を tasks.md に\n上書き保存する"]
     CopyTasks --> E
 ```
+
+| 出力 | 内容 | 保存先 |
+| --- | --- | --- |
+| ① アーカイブ用 | `Done` / `Cancelled` タスクの一覧 | `tasks-archive-YYYY-MM.md`（月単位） |
+| ② 整理後のファイル | アーカイブ対象を除いた `tasks.md` 全文 | `templates/tasks.md` |
 
 ---
 
