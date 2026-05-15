@@ -36,6 +36,15 @@ AIの自動処理（Inbox 処理・CPM 計算）の詳細は [explanation/inbox-
 - セッションの外で思いついたことは `templates/tasks.md` の `## Inbox` にメモを書いておくだけでよい。次回セッション開始時にAIが自動処理する
 - タスクが増えてきたら [アーカイブ](../how-to/archive.md) を参照
 
+## サンプルで試す
+
+`templates/tasks.md` の代わりにサンプルファイルを貼り付けると、AIの挙動をすぐに確認できる。
+
+| ファイル | 内容 | 確認できること |
+| --- | --- | --- |
+| `examples/tasks-before.md` | Inbox にメモが3件ある状態 | Inbox 処理・分類・WBS分解 |
+| `examples/tasks-after.md` | WBS が組み上がった状態 | CPM計算・ステータス変更などの2回目以降の操作 |
+
 ---
 
 ← [ドキュメント一覧](../index.md)

@@ -6,6 +6,7 @@
 task-streamliner/
 ├── templates/   ← ユーザーが直接触るファイル
 ├── prompts/     ← 保険用の単体プロンプト
+├── examples/    ← 動作確認・チュートリアル用サンプル
 └── docs/        ← ドキュメント
 ```
 
