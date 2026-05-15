@@ -63,7 +63,7 @@ WBS に追加するアイテムは以下の手順で処理する。
 | status 遷移 | `Todo` → `In-Progress` → `Waiting` / `Done` / `Cancelled`。`depends_on` が未完了なら `Waiting` |
 | サマリータスクの status | 子タスクから自動導出する。すべて Done/Cancelled → Done、1つでも In-Progress → In-Progress、1つでも Waiting → Waiting、それ以外 → Todo |
 | depends_on 整合性 | 参照先 id が WBS テーブルに存在しない場合はユーザーに確認する |
-| estimate 不足 | estimate が未入力のリーフタスクをユーザーに通知する |
+| estimate 不足 | estimate が未入力のリーフタスクをユーザーに通知し、`due` 近い順でフロート計算済みタスクの後に配置する |
 | アーカイブ | 全リーフが Done/Cancelled のサマリーを対象とする。サマリーと配下リーフをまとめて切り出し、WBS を再採番する。アーカイブ用内容と整理後の tasks.md を両方返す |
 | 図の更新 | Gantt Chart・Dependency Graph は常に WBS テーブルの内容と整合させる |
 
