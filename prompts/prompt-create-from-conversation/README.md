@@ -1,41 +1,37 @@
-# 会話からの汎用プロンプト抽出ツール
+# prompt-create-from-conversation
 
-対話 AI との会話を分析し、同じ作業を別の場面でも再現できる汎用プロンプトを抽出するツール。
+Analyze a conversation with an AI and extract a reusable prompt that reproduces the same work in other contexts.
 
-プロンプトを直接生成するのではなく、**まず要件定義書を作る**ことを中間ステップとして挟む。
-要件定義書をレビュー・修正してから、それをもとにプロンプトを生成する 2 ステップ構成。
+Uses a two-step process: first generate a requirements document, review and refine it, then generate the prompt from it.
 
-## 使い方
+[日本語版 / Japanese](README.ja.md)
 
-### ステップ1: 会話 → 要件定義書
+## How it works
 
-1. `requirements-create-from-conversation.md` の全文をコピーする
-2. 汎用プロンプト化したい作業を行った **同じ会話** の末尾に貼り付けて送信する
-3. AI がその会話の履歴を分析し、自己チェック・修正を経て要件定義書を出力する
-4. 出力された要件定義書をレビュー・必要に応じて修正する
+### Step 1: Conversation → Requirements document
 
-### ステップ2: 要件定義書 → 汎用プロンプト
+1. Copy the full content of `requirements-create-from-conversation.md`
+2. Paste it at the end of the **same conversation** where the target work was done, then send
+3. The AI analyzes the conversation history and outputs a requirements document
+4. Review and refine the requirements document as needed
 
-1. `prompt-create-from-requirements.md` の全文をコピーする
-2. 末尾の `## 要件定義書` セクションにステップ1で得た要件定義書を貼り付ける
-3. 対話 AI に渡す
-4. AI が要件定義書をもとに、自己チェック・修正を経て汎用プロンプトを出力する
-5. 出力されたプロンプトをファイルに保存して再利用する
+### Step 2: Requirements document → Reusable prompt
 
-## ドキュメント
+1. Copy the full content of `prompt-create-from-requirements.md`
+2. Paste the requirements document from Step 1 into the `## 要件定義書` section at the end
+3. Send to a chat AI
+4. The AI outputs a reusable prompt based on the requirements document
+5. Save the prompt to a file for reuse
 
-| カテゴリ | 内容 |
-|---------|------|
-| [チュートリアル](docs/tutorials/README.md) | ステップ1〜2を通した全体ウォークスルー |
-| [ハウツー](docs/how-to/README.md) | 要件定義書のレビュー・改良方法 |
-| [リファレンス](docs/reference/README.md) | プロンプトファイルの入出力・セクション仕様 |
-| [解説](docs/explanation/design-decisions.md) | 2ステップ構成・要件定義書の中間層・自己チェックを採用した理由 |
+## Documentation
 
-## ファイル構成
+→ [docs/](docs/)
 
-| ファイル | ステップ | 内容 |
-|---------|---------|------|
-| `requirements-create-from-conversation.md` | ステップ1 | 会話を分析して要件定義書を生成するプロンプト |
-| `prompt-create-from-requirements.md` | ステップ2 | 要件定義書からプロンプトを生成するプロンプト |
-| `requirements.md` | — | このプロジェクトの要件定義書 |
-| `docs/` | — | Diataxis 形式のドキュメント |
+## File structure
+
+| File | Step | Role |
+| --- | --- | --- |
+| `requirements-create-from-conversation.md` | Step 1 | Prompt that analyzes a conversation and generates a requirements document |
+| `prompt-create-from-requirements.md` | Step 2 | Prompt that generates a reusable prompt from a requirements document |
+| `requirements.md` | — | Requirements document for this project |
+| `docs/` | — | Documentation (Diataxis structure) |
