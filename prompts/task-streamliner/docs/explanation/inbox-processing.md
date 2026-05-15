@@ -57,10 +57,10 @@ flowchart TD
     E([完了])
 
     S --> Parse["メモを解析"]
-    Parse --> CreateST["サマリータスクを作成\nWBS コード採番"]
+    Parse --> CreateST["サマリータスクを作成\nwbs・id を採番"]
     CreateST --> Atomic{1ステップで\n完了できるか?}
-    Atomic -- Yes --> OneLeaf["リーフタスクを追加\nWBS: 親.1"]
-    Atomic -- No --> MultiLeaf["リーフタスクに分解\ndepends_on を設定"]
+    Atomic -- Yes --> OneLeaf["リーフタスクを追加\nwbs・id を採番"]
+    Atomic -- No --> MultiLeaf["リーフタスクに分解\nwbs・id 採番、depends_on を設定"]
     OneLeaf --> Fill["due・tags・estimate を補完"]
     MultiLeaf --> Fill
     Fill --> E
