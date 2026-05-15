@@ -9,10 +9,7 @@ flowchart TD
 
     S --> Trigger["「アーカイブして」と入力する"]
     Trigger --> Return["AIが2つの内容を返す\n① アーカイブ用\n② 整理後のファイル"]
-    Return --> Exists{同月の archive\nファイルがある?}
-    Exists -- Yes --> Append["① を末尾に追記する"]
-    Exists -- No --> New["① で新規作成する"]
-    Append --> CopyTasks
+    Return --> New["① を tasks-archive-YYYY-MM-DD.md\nとして保存する"]
     New --> CopyTasks["② を tasks.md に\n上書き保存する"]
     CopyTasks --> E
 ```

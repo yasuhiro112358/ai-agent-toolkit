@@ -26,7 +26,6 @@ flowchart LR
 | --- | --- |
 | 命名 | `tasks-archive-YYYY-MM-DD.md`（アーカイブ実行日） |
 | 形式 | `tasks.md` の WBS テーブルと同じ Markdown テーブル形式 |
-| 追記 | 同日ファイルが存在する場合は末尾に追記する |
 
 ## tasks.md 側の処理
 
