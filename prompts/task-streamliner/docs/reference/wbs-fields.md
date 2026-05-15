@@ -3,11 +3,21 @@
 `## WBS` セクションのテーブル仕様。
 
 ```markdown
-| wbs | title | status | due | depends_on | tags | estimate |
-|-----|-------|--------|-----|------------|------|----------|
+| id | wbs | title | status | due | depends_on | tags | estimate |
+|----|-----|-------|--------|-----|------------|------|----------|
 ```
 
 ---
+
+## `id`
+
+| 項目 | 値 |
+| --- | --- |
+| 型 | integer |
+| 制約 | 採番後に変わらない。アーカイブ・削除後も再利用しない |
+| 例 | `1`, `2`, `3` |
+
+`depends_on` の参照先。WBS を再採番しても `id` は変わらないため、依存関係が壊れない。詳細は [explanation/archive-dataflow.md](../explanation/archive-dataflow.md) を参照。
 
 ## `wbs`
 
@@ -50,8 +60,8 @@ WBS の詳細は [explanation/wbs.md](../explanation/wbs.md) を参照。
 | 項目 | 値 |
 | --- | --- |
 | 型 | string |
-| 制約 | 先行タスクの `wbs` コードをカンマ区切りで列挙。なければ `—` |
-| 例 | `1.1`, `1.1, 1.2`, `—` |
+| 制約 | 先行タスクの `id` をカンマ区切りで列挙。なければ `—` |
+| 例 | `2`, `2, 3`, `—` |
 | 備考 | サマリータスクを参照した場合、配下のリーフタスクがすべて完了するまで待ち |
 
 CPM 計算の入力として使用する。詳細は [explanation/cpm-prioritization.md](../explanation/cpm-prioritization.md) を参照。

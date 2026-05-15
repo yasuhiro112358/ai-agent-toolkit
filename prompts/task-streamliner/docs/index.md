@@ -28,6 +28,7 @@
 | ディレクトリ構造の設計意図を理解したい | [explanation/directory-structure.md](explanation/directory-structure.md) |
 | セクション構成の設計意図を理解したい | [explanation/section-structure.md](explanation/section-structure.md) |
 | WBS によるタスク構造を理解したい | [explanation/wbs.md](explanation/wbs.md) |
+| アーカイブのデータフローを理解したい | [explanation/archive-dataflow.md](explanation/archive-dataflow.md) |
 | Inbox 処理のフローを理解したい | [explanation/inbox-processing.md](explanation/inbox-processing.md) |
 | CPMによる優先順位の自動決定を理解したい | [explanation/cpm-prioritization.md](explanation/cpm-prioritization.md) |
 | なぜ「task-streamliner」という名前なのかを理解したい | [explanation/naming.md](explanation/naming.md) |
