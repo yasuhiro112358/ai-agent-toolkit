@@ -14,7 +14,6 @@
 
 | やりたいこと | 参照先 |
 | --- | --- |
-| 週次レビューをしたい | [how-to/weekly-review.md](how-to/weekly-review.md) |
 | 完了タスクをアーカイブしたい | [how-to/archive.md](how-to/archive.md) |
 
 ## 仕様・設計を確認する
