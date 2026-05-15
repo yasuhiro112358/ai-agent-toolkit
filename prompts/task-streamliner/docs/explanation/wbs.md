@@ -8,7 +8,7 @@ task-streamliner の `## WBS` セクションは**WBS（Work Breakdown Structure
 
 タスクの階層をドット区切りの番号で表現する。
 
-```
+```markdown
 1       発表資料を作る          ← サマリータスク（ゴール）
 1.1       構成案を作る          ← リーフタスク（実作業）
 1.2       スライドを作成する    ← リーフタスク
@@ -56,7 +56,7 @@ flowchart TD
 
 `depends_on` は WBS コードで参照する。サマリータスクを参照した場合、そのサマリー配下のすべてのリーフタスクが完了するまで待ちとみなす。
 
-```
+```markdown
 | wbs | title        | depends_on |
 |-----|--------------|------------|
 | 1.1 | 構成案を作る | —          |
@@ -65,18 +65,7 @@ flowchart TD
 | 2.1 | サーバー設定 | 1          |  ← ゴール1が完了するまで待つ
 ```
 
-## Inbox 処理との接続
-
-```mermaid
-flowchart TD
-    Inbox([Inbox のメモ]) --> Parse["メモを解析\n（ゴール・範囲・成果物を読み取る）"]
-    Parse --> ST["サマリータスクを作成\nWBS コード採番（1, 2, 3 …）"]
-    ST --> Atomic{1ステップで\n完了できるか?}
-    Atomic -- Yes --> Leaf1["リーフタスクを1件追加\nWBS: 親.1"]
-    Atomic -- No  --> Leaf2["リーフタスクに分解\nWBS: 親.1, 親.2 …\ndepends_on を設定"]
-    Leaf1 --> CPM([CPM を計算・WBS を更新])
-    Leaf2 --> CPM
-```
+Inbox からのタスク分解フローは [explanation/inbox-processing.md](inbox-processing.md) を参照。
 
 ---
 
