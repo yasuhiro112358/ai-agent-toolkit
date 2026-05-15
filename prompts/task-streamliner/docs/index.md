@@ -9,8 +9,7 @@
 | やりたいこと | 参照先 |
 | --- | --- |
 | 初めてセッションを始めたい | [tutorials/first-session.md](tutorials/first-session.md) |
-| すぐに動作確認したい（Inbox 処理前） | [examples/tasks-before.md](../examples/tasks-before.md) |
-| すぐに動作確認したい（WBS 構築済み） | [examples/tasks-after.md](../examples/tasks-after.md) |
+| サンプルファイルで動作を確認したい | [tutorials/try-with-samples.md](tutorials/try-with-samples.md) |
 
 ## 操作する
 
