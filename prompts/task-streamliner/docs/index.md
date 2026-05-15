@@ -17,6 +17,7 @@
 | やりたいこと | 参照先 |
 | --- | --- |
 | 完了タスクをアーカイブしたい | [how-to/archive.md](how-to/archive.md) |
+| AI Instructions が壊れたときに復旧したい | [how-to/ai-instructions-recovery.md](how-to/ai-instructions-recovery.md) |
 
 ## 仕様・設計を確認する
 
