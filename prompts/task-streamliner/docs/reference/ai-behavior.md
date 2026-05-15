@@ -4,8 +4,7 @@
 
 ## セッション開始時の自動処理
 
-1. **Inbox 処理** — Inbox の各項目を解析し、サマリータスクとリーフタスクに分解して WBS に追加する
-2. **CPM 計算** — `depends_on`・`due`・`estimate` からフロートを算出し、WBS テーブルを実行優先順に並べ替える
+詳細は [explanation/inbox-processing.md](../explanation/inbox-processing.md) を参照。
 
 ## 操作ルール
 

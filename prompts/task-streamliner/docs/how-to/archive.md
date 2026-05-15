@@ -2,20 +2,21 @@
 
 `tasks.md` が肥大化してきたら `Done` / `Cancelled` タスクをアーカイブして軽量化する。
 
-## 手順
+```mermaid
+flowchart TD
+    S([開始])
+    E([終了])
 
-セッション中に「アーカイブして」と入力する。
-
-AIが以下の2つの内容を返す。
-
-1. **`tasks-archive-YYYY-MM.md` 用の内容** — `Done` / `Cancelled` タスクの一覧（コードブロック）
-2. **整理後の `tasks.md`** — アーカイブ対象を除いた状態のファイル全文（コードブロック）
-
-それぞれをコピーして対応するファイルに貼り付けて保存する。
-
-## アーカイブファイルの命名
-
-`tasks-archive-YYYY-MM.md`（月単位）。同月のアーカイブが既にある場合は末尾に追記する。
+    S --> Trigger["「アーカイブして」と入力する"]
+    Trigger --> Return["AIが2つのコードブロックを返す\n① アーカイブ用内容\n② 整理後の tasks.md"]
+    Return --> CopyArchive["① をコピーして\ntasks-archive-YYYY-MM.md に追記保存する"]
+    CopyArchive --> Exists{同月のファイルが\nすでにある?}
+    Exists -- Yes --> Append["末尾に追記する"]
+    Exists -- No --> New["新規作成する"]
+    Append --> CopyTasks
+    New --> CopyTasks["② をコピーして\ntemplates/tasks.md に上書き保存する"]
+    CopyTasks --> E
+```
 
 ---
 
