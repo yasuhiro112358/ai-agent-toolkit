@@ -1,4 +1,4 @@
-[ドキュメント](../README.md) > [リファレンス](README.md) > プロンプトファイル仕様
+[ドキュメント](../index.md) > [リファレンス](README.md) > プロンプトファイル仕様
 
 > **Diataxis: Reference** — 2つのプロンプトファイルの入出力・挙動・セクション構成の正確な仕様。
 
@@ -6,7 +6,7 @@
 
 ---
 
-## requirements-create-from-conversation.md（ステップ1）
+## requirements-extract.md（ステップ1）
 
 ### 概要
 
@@ -54,7 +54,7 @@
 
 ---
 
-## prompt-create-from-requirements.md（ステップ2）
+## prompts-generate.md（ステップ2）
 
 ### 概要
 
@@ -103,4 +103,4 @@
 
 ---
 
-[← リファレンス一覧](README.md) | [ドキュメント一覧](../README.md)
+[← リファレンス一覧](README.md) | [ドキュメント一覧](../index.md)
