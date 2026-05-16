@@ -19,7 +19,6 @@ prompt-distiller の利用者向けドキュメント。[Diataxis](https://diata
 | ドキュメント | 内容 |
 | ---------- | ---- |
 | [プロンプトファイル仕様](reference/prompts.md) | 2つのプロンプトの入出力・挙動・セクション仕様 |
-| [プロジェクト要件定義書](reference/requirements.md) | このツール自体の要件定義 |
 
 ## 解説 — なぜこうなっているかを理解する
 

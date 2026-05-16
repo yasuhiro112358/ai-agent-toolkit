@@ -32,6 +32,19 @@ Uses a two-step process: first generate a requirements document, review and refi
 
 After either option, save the prompt to a file for reuse.
 
+## Supported tasks
+
+Works for any task type where you repeated a pattern in conversation:
+
+| Category | Examples |
+| -------- | -------- |
+| Text processing | Summarization, translation, proofreading, writing |
+| Code | Review, refactoring, bug fixing, spec interpretation |
+| Analysis | Data analysis, comparison, risk assessment |
+| Structuring | Organizing information, outline creation, templating |
+
+> Not applicable: merging multiple conversations into one prompt (one conversation → one requirements document is the basic unit).
+
 ## Documentation
 
 → [docs/index.md](docs/index.md)
