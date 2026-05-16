@@ -1,6 +1,7 @@
+# Explanation: なぜ設定ファイル方式（pack.cfg）を採用したか
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ設定ファイル方式（pack.cfg）を採用したか
 
 当初はシェルスクリプト（`bundle.sh` / `bundle.cmd`）の中に設定値を埋め込む方式を検討した。しかし以下の問題があった：
 

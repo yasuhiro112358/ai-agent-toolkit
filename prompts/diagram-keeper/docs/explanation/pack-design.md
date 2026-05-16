@@ -1,6 +1,7 @@
+# Explanation: pack.py / pack.cfg の設計判断
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: pack.py / pack.cfg の設計判断
 
 `pack.py` とその設定ファイル `pack.cfg` の設計において行った判断の一覧。
 

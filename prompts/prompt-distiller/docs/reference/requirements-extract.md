@@ -1,8 +1,9 @@
+# requirements-extract.md 仕様（ステップ1）
+
 [ドキュメント](../index.md) > requirements-extract.md 仕様
 
 > **Diataxis: Reference** — requirements-extract.md の入出力・挙動・セクション構成の正確な仕様。
 
-# requirements-extract.md 仕様（ステップ1）
 
 ## 概要
 

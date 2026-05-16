@@ -1,6 +1,7 @@
+# Explanation: chunk_size の命名とデフォルト値
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: chunk_size の命名とデフォルト値
 
 ## 設定キー名: chunk_size
 

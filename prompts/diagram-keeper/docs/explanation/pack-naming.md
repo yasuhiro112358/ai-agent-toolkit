@@ -1,6 +1,7 @@
+# Explanation: なぜスクリプト名を pack にしたか
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜスクリプト名を pack にしたか
 
 「コードを1つのテキストにまとめる」操作を表す動詞として `pack` を採用した。
 

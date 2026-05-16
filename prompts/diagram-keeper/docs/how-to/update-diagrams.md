@@ -1,6 +1,7 @@
+# How-to: マスタを更新する（Upsert）
+
 [diagram-keeper/](../index.md) > how-to
 
-# How-to: マスタを更新する（Upsert）
 
 コードを追加・変更したとき、マスタ2枚（クラス図・コールグラフ）を最新状態に更新する。
 

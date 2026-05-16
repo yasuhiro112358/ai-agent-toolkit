@@ -1,6 +1,7 @@
+# Reference: プロンプトファイル
+
 [diagram-keeper/](../index.md) > reference
 
-# Reference: プロンプトファイル
 
 `prompts/` ディレクトリに格納された3つのプロンプトファイルはそれぞれ CRUD の1操作に対応する。ファイル全文をそのまま AI に貼り付けて使う自己完結型。
 

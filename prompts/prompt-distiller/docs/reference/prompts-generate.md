@@ -1,8 +1,9 @@
+# prompts-generate.md 仕様（ステップ2）
+
 [ドキュメント](../index.md) > prompts-generate.md 仕様
 
 > **Diataxis: Reference** — prompts-generate.md の入出力・挙動・セクション構成の正確な仕様。
 
-# prompts-generate.md 仕様（ステップ2）
 
 ## 概要
 

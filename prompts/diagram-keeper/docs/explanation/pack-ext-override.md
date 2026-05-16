@@ -1,6 +1,7 @@
+# Explanation: なぜ ext は追加ではなく置き換えか
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ ext は追加ではなく置き換えか
 
 `ext` に拡張子を指定すると、組み込みのデフォルト（C/C++・Java・C#・Python・TypeScript 等 9 言語）は**完全に置き換わる**。追加ではない。
 

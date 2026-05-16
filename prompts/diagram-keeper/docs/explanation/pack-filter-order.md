@@ -1,6 +1,7 @@
+# Explanation: include / exclude の評価順
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: include / exclude の評価順
 
 `include` を先に評価し、その結果に対して `exclude` を適用する。
 

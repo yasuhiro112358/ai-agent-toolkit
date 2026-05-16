@@ -1,8 +1,9 @@
+# 解説: 全体フロー
+
 [ドキュメント](../index.md) > 全体フロー
 
 > **Diataxis: Explanation** — prompt-distiller の全体フローと2ステップ構成の概観。
 
-# 解説: 全体フロー
 
 ```mermaid
 sequenceDiagram

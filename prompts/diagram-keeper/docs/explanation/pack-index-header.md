@@ -1,6 +1,7 @@
+# Explanation: なぜ出力ヘッダを === INDEX === にしたか
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ出力ヘッダを === INDEX === にしたか
 
 当初 `=== MANIFEST ===` というヘッダを使っていた。`MANIFEST` は Java の JAR や Python パッケージングで使われる用語を借用したものだが、このツール独自のフォーマット名として定着しにくく、一般的な意味からも少しずれていた。
 

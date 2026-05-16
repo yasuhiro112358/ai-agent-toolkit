@@ -1,6 +1,7 @@
+# Reference: マスタ図仕様
+
 [diagram-keeper/](../index.md) > reference
 
-# Reference: マスタ図仕様
 
 マスタとして管理する2枚の図（クラス図・コールグラフ）の仕様。
 

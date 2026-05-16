@@ -1,6 +1,7 @@
+# Explanation: シーケンス図をマスタに含めない理由
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: シーケンス図をマスタに含めない理由
 
 シーケンス図はオンデマンド派生物として扱い、マスタには含めない。
 

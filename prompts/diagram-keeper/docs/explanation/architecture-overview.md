@@ -1,6 +1,7 @@
+# Explanation: ツールの背景と全体設計
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: ツールの背景と全体設計
 
 このツールを作った動機・制約条件・全体アーキテクチャ。各設計判断の出発点となる文脈。
 

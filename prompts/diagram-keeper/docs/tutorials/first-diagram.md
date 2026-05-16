@@ -1,6 +1,7 @@
+# Tutorial: 初めてのマスタ図作成
+
 [diagram-keeper/](../index.md) > tutorials
 
-# Tutorial: 初めてのマスタ図作成
 
 `pack.py` でサンプルコードをバンドルし、AI でクラス図とコールグラフを初めて作る。所要時間: 約 10〜15 分。
 

@@ -1,6 +1,7 @@
+# How-to: エントリを削除する（Delete）
+
 [diagram-keeper/](../index.md) > how-to
 
-# How-to: エントリを削除する（Delete）
 
 ソースコードからファイルやクラスを削除したとき、マスタ2枚から対応エントリを除去する。
 

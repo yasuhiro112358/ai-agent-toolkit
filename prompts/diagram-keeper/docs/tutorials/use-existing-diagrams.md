@@ -1,6 +1,7 @@
+# Tutorial: マスタ図の活用
+
 [diagram-keeper/](../index.md) > tutorials
 
-# Tutorial: マスタ図の活用
 
 `diagrams/class-diagram.md` と `diagrams/call-graph.md` が手元にある状態から始める。マスタ図を読んで、シーケンス図を派生させるまでを体験する。
 

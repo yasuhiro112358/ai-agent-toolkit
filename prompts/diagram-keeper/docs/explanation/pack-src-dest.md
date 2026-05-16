@@ -1,6 +1,7 @@
+# Explanation: なぜ変数名を src / dest にしたか
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ変数名を src / dest にしたか
 
 入出力のペアとして `root`/`out` から `src`/`dest` に変更した。
 

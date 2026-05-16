@@ -1,6 +1,7 @@
+# Reference: pack.py / pack.cfg
+
 [diagram-keeper/](../index.md) > reference
 
-# Reference: pack.py / pack.cfg
 
 ソースファイルを1つのテキストにまとめる Python スクリプト（Python 3.8 以上、標準ライブラリのみ）。
 

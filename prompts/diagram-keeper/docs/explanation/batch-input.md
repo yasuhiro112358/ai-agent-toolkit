@@ -1,6 +1,7 @@
+# Explanation: なぜ一括投入型か
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ一括投入型か
 
 プロンプト全文 + マスタ + バンドルを 1 メッセージで投入する**一括投入型**を採用し、複数ターンに分けて貼り付ける対話型運用は採用しなかった。
 

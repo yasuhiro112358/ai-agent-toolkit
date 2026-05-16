@@ -1,6 +1,7 @@
+# Explanation: なぜ Mermaid か
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ Mermaid か
 
 図の記法として Mermaid を採用した根拠。
 

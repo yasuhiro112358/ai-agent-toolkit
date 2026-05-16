@@ -4,14 +4,94 @@
 # 全ルールをデフォルトで有効にする（以下で個別に上書き）
 default: true
 
-# MD013: 1行の文字数制限
-# 日本語混在ドキュメントでは行長制限が実用的でないため無効化
-MD013: false
+# ============================================================
+# 品質ルール（レンダリング）
+# パース・レンダリング・意味的な正しさに直接影響する
+# ============================================================
 
-# MD025: ファイル内に H1 見出しが複数あることを禁止
-# プロンプトファイルの出力テンプレートセクションでは H1 が複数登場するため無効化
-MD025: false
+# --- 見出し ---
+MD001: true   # Heading levels should only increment by one level at a time
+MD018: true   # No space after hash on atx style heading
+MD020: true   # No space inside hashes on closed atx style heading
+MD022: true   # Headings should be surrounded by blank lines
+MD023: true   # Headings must start at the beginning of the line
+MD024:        # Multiple headings with the same content（同一親の兄弟のみチェック）
+  siblings_only: true
+MD025:        # frontmatter の title フィールドは H1 としてカウントしない
+  front_matter_title: ""
 
-# MD041: ファイルの先頭行が H1 見出しであることを要求
-# YAML フロントマターや引用符で始まるファイルが多いため無効化
-MD041: false
+# --- リスト ---
+MD005: true   # Inconsistent indentation for list items at the same level
+MD007: true   # Unordered list indentation
+MD030: true   # Spaces after list markers
+MD031: true   # Fenced code blocks should be surrounded by blank lines
+MD032: true   # Lists should be surrounded by blank lines
+
+# --- リンク ---
+MD011: true   # Reversed link syntax
+MD034: true   # Bare URL used
+MD042: true   # No empty links
+MD051: true   # Link fragments should be valid
+MD052: true   # Reference links and images should use a label that is defined
+
+# --- テーブル ---
+MD055: true   # Table pipe style
+MD056: true   # Table column count
+MD058: true   # Tables should be surrounded by blank lines
+MD060:        # Table column style（テーブル内一貫性を要求）
+  style: any
+
+# --- その他 ---
+MD009: true   # Trailing spaces（CommonMark で行末2スペース以上が <br> になる）
+MD010: true   # Hard tabs
+MD027: true   # Multiple spaces after blockquote symbol
+MD033:        # Inline HTML（テーブルセル内改行のみ許可）
+  allowed_elements: [br]
+MD037: true   # Spaces inside emphasis markers
+MD041: true   # First line in a file should be a top-level heading
+MD047: true   # Files should end with a single newline character
+
+# ============================================================
+# 品質ルール（AI理解）
+# レンダリングには影響しないが、AI の文書理解精度を向上させる
+# ============================================================
+
+MD003: true   # Heading style（ATX 形式 — 先頭文字で即座に見出しと判断できる）
+MD029:        # Ordered list item prefix（1. 2. 3. — 生の MD で連番が明示される）
+  style: ordered
+MD036: true   # Emphasis used instead of a heading
+MD040: true   # Fenced code blocks should have a language specified
+MD045: true   # Images should have alternate text (alt text)
+MD046:        # Code block style（MD040 の前提条件）
+  style: fenced
+MD054: true   # Link and image style（インライン形式 — URL が文脈に即置される）
+
+# ============================================================
+# スタイル規約ルール
+# 機能上同等だが当リポジトリが特定スタイルを規約として選択している
+# ============================================================
+
+MD004: true   # Unordered list style（- に統一）
+MD035: true   # Horizontal rule style（--- に統一）
+MD048: true   # Code fence style（バッククォートに統一）
+MD049: true   # Emphasis style（アスタリスクに統一）
+MD050: true   # Strong style（アスタリスクに統一）
+
+# ============================================================
+# スタイル任意ルール（無効化）
+# 機能上の差異がなく当リポジトリの規約でもない、または lint では実効性がない
+# ============================================================
+
+MD012: false  # Multiple consecutive blank lines（CommonMark は余分な空行を無視する）
+MD013: false  # Line length（日本語文章・テーブルは行長制限なし）
+MD014: false  # Dollar signs used before commands without showing output
+MD019: false  # Multiple spaces after hash（CommonMark では有効な見出しとして解析される）
+MD021: false  # Multiple spaces inside hashes on closed atx style heading（同上）
+MD026: false  # Trailing punctuation in heading（レンダリングに影響しない）
+MD028: false  # Blank line inside blockquote（段落分割を許容）
+MD038: false  # Spaces inside code span（CommonMark で自動除去される）
+MD039: false  # Spaces inside link text（リンクは機能する）
+MD043: false  # Required heading structure（プロジェクト固有すぎる）
+MD044: false  # Proper names should have the correct capitalization（ドメイン依存・誤検知が多い）
+MD053: false  # Link and image reference definitions should be needed（レンダリングに影響しない）
+MD059: false  # Link text should be descriptive（lint では意味的判断ができず実効性がない）

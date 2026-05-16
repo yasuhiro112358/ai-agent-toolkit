@@ -1,6 +1,7 @@
+# Explanation: なぜ図を中間表現として選ぶか
+
 [diagram-keeper/](../index.md) > explanation
 
-# Explanation: なぜ図を中間表現として選ぶか
 
 コードの情報を保持する形式として metadata.json ではなく Mermaid 図（クラス図＋コールグラフ）を選んだ理由。
 
