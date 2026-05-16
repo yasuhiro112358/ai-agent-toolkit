@@ -50,7 +50,7 @@ scenario: <ユーザー指示のサマリー>
 （Mermaid sequenceDiagram ブロック）
 ```
 
-ファイル名（`<name>`）はシナリオを識別できる短い英数字で提案する（例: `auth-login-success.md`）。利用者が保存しない可能性もあるため、ファイル名の決定は暫定でよい。
+ファイル名（`<name>`）は `<起点クラス>-<シナリオ>.md` の形式で提案する（例: `auth-service-login-success.md`、`payment-api-timeout-retry.md`）。利用者が保存しない可能性もあるため、ファイル名の決定は暫定でよい。
 
 # 処理ルール
 
