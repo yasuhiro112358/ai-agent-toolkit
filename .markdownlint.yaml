@@ -1,6 +1,9 @@
 # markdownlint 設定
 # 参考: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
 
+# 全ルールをデフォルトで有効にする（以下で個別に上書き）
+default: true
+
 # MD013: 1行の文字数制限
 # 日本語混在ドキュメントでは行長制限が実用的でないため無効化
 MD013: false
