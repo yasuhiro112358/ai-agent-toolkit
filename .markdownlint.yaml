@@ -1,0 +1,14 @@
+# markdownlint 設定
+# 参考: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# MD013: 1行の文字数制限
+# 日本語混在ドキュメントでは行長制限が実用的でないため無効化
+MD013: false
+
+# MD025: ファイル内に H1 見出しが複数あることを禁止
+# プロンプトファイルの出力テンプレートセクションでは H1 が複数登場するため無効化
+MD025: false
+
+# MD041: ファイルの先頭行が H1 見出しであることを要求
+# YAML フロントマターや引用符で始まるファイルが多いため無効化
+MD041: false
