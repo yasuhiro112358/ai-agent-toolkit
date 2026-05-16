@@ -12,11 +12,13 @@ prompt-distiller の利用者向けドキュメント。[Diataxis](https://diata
 
 | ドキュメント | 内容 |
 | ---------- | ---- |
+| [方法A・Bを選ぶ](how-to/choose-session-mode.md) | ステップ2を同じ会話で続けるか、新しい会話で実行するかの判断 |
 | [要件定義書の最終確認](how-to/verify-requirements.md) | ステップ2に進む前のレビューチェックリスト |
 | [ゴール記述を修正する](how-to/fix-goal-statement.md) | ゴールが「何をしたか」に留まっている場合の修正 |
 | [アクター記述を修正する](how-to/fix-actor-description.md) | アクターが抽象的な場合の修正 |
 | [変数化を修正する](how-to/fix-variable-extraction.md) | 変数化が不十分な場合の修正 |
 | [暗黙の制約条件を補足する](how-to/fix-missing-constraints.md) | 制約条件から暗黙のルールが抜けている場合の修正 |
+| [生成されたプロンプトを修正する](how-to/refine-generated-prompt.md) | ステップ2の出力が期待と異なる場合の修正手順 |
 
 ## リファレンス — 正確な仕様を調べる
 
@@ -35,6 +37,7 @@ prompt-distiller の利用者向けドキュメント。[Diataxis](https://diata
 | [なぜ要件定義書を中間層に置くか](explanation/why-requirements-middle-layer.md) | 「何をするか」と「なぜするか」を分離する設計 |
 | [なぜ自己チェック＋修正を要件に含めるか](explanation/why-self-check.md) | 確認だけでなく修正まで AI に行わせる理由 |
 | [なぜ特定のAIサービスに依存しないか](explanation/why-ai-agnostic.md) | 移植性を確保するための制約 |
+| [変数設計のガイドライン](explanation/variable-naming-guidelines.md) | 変数名の粒度・命名規則・Before/After 例 |
 
 ---
 
